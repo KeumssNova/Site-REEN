@@ -1,0 +1,29 @@
+.header {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 25px 10px  25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div{
+        font-family: 'Conthrax', sans-serif;
+    }
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
+    
+    div{
+        display: flex;
+        align-items: center;
+    }
+    ul{
+        display: flex;
+        list-style: none;
+        align-items: center;
+        gap: 20px;
+    }
+}

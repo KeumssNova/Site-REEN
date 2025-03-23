@@ -1,0 +1,17 @@
+.profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .profil h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .profil p {
+    font-size: 16px;
+    color: #777;
+  }

@@ -1,0 +1,16 @@
+.BarreLateral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    background-color: #a8a8a8;
+    color: white;
+    width: 223px;
+}
+
+.Lien-BarreLateral{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 20px;
+}

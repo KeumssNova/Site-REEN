@@ -1,0 +1,12 @@
+.actualites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .actualites h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+  }

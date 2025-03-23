@@ -1,5 +1,6 @@
 import NewsItem from './NewsItem';
 
+
 export default function NewsList({ news }) {
   return (
     <div>

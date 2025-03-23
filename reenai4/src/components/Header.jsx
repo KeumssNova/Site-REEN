@@ -1,14 +1,22 @@
 import { Link } from 'react-router-dom';
+import '../assets/css/Header.css'; 
+import SearchBar from './SearchBar.jsx'
 
 export default function Header() {
   return (
-    <nav>
-      <ul>
-        <li><Link to="/">Accueil</Link></li>
-        <li><Link to="/connexion">Connexion</Link></li>
-        <li><Link to="/profil">Profil</Link></li>
-        <li><Link to="/actualites">Actualités</Link></li>
-      </ul>
-    </nav>
+    <header className="header">
+      <div>
+        <Link to="/">
+          <h1>Reen</h1>
+        </Link>
+      </div>
+      <nav>
+        <SearchBar />
+        <ul>
+          <li><Link to="/connexion">Connexion</Link></li>
+          <li><Link to="/inscription">Inscription</Link></li>
+        </ul>
+      </nav>
+    </header>
   );
 }
