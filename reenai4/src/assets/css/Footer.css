@@ -1,11 +1,13 @@
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 25px 10px  25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div ul{
+    display: flex;
+    gap: 20px;
   }
-  
-  footer p {
-    margin: 0;
-  }
+}

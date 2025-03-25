@@ -5,7 +5,7 @@ export default function Header() {
     <div>
         <ul className='Lien-BarreLateral'>
           <li><Link to="/actualites">Actualites</Link></li>
-          <li><Link to="/l'entreprise">L`&apos`entreprise</Link></li>
+          <li><Link to="/entreprise">L&apos;entreprise</Link></li>
           <li><Link to="/contact">Nous Contacter</Link></li>
         </ul>
     </div>

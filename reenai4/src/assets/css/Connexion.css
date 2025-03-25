@@ -1,30 +1,47 @@
-.connexion {
-    display: flex;
+.connexion{
+  height: 100vh;
+
+}
+
+.connexion-container {
+    /* display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .connexion-main{
+    width: 400px;
     padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
-  .connexion h2 {
+  .connexion-container h2 {
+    text-align: center;
     margin-bottom: 20px;
     font-size: 24px;
     color: #333;
   }
   
-  .connexion form {
+  .connexion-container form {
     display: flex;
     flex-direction: column;
-    width: 300px;
   }
   
-  .connexion input {
+  .connexion-container input {
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
   
-  .connexion button {
+  .connexion-container button {
     padding: 10px;
     background-color: #333;
     color: #fff;
@@ -33,6 +50,22 @@
     cursor: pointer;
   }
   
-  .connexion button:hover {
+  .connexion-container button:hover {
     background-color: #ff6347; /* Couleur au survol */
+  }
+
+  .text-connexion{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .text-connexion a {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .text-connexion a:hover {
+    color: #ff6347; /* Couleur au survol */
   }
