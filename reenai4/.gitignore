@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Fichiers d'environnement
+.env
+.env.local
+.env*.local
+
+# Fichiers de variables sensibles
+*.env

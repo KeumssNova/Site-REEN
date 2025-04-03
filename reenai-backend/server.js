@@ -143,6 +143,12 @@ app.use((req, res, next) => {
   next();
 });
 
+// Middleware CORS
+app.use(cors({
+  origin: 'http://localhost:5173', // URL de votre front
+  credentials: true
+}));
+
 // Routes
 console.log("✅ Chargement des routes...")
 app.use('/api/auth', require('./routes/auth'));
