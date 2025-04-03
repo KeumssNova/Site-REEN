@@ -8,7 +8,8 @@ const { authenticate, isAdmin } = require('../middleware/auth');
 
 // Route protégée par authentification
 router.get('/users', authenticate, isAdmin, adminController.getAllUsers);
+router.delete('/users/:id', authenticate, isAdmin, adminController.deleteUser);
 
-router.get('/test', (req, res) => res.send("Route admin test OK"));
+
 
 module.exports = router;

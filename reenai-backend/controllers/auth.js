@@ -1,68 +1,59 @@
-const User = require('../models/User');
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
+const User = require('../models/User');
 
-
-// inscription
 exports.register = async (req, res) => {
   try {
-    // 1. Récupère les données du body
     const { email, password } = req.body;
-
-    // 2. Vérifie si l'email existe déjà
-    const existingUser = await User.findOne({ email });
-    if (existingUser) {
-      return res.status(400).json({ message: "Email déjà utilisé" });
+    
+    // Validation supplémentaire
+    if (!password || password.length < 6) {
+      return res.status(400).json({ message: "Le mot de passe doit contenir au moins 6 caractères" });
     }
 
-    // 3. Hash le mot de passe (avec bcrypt)
     const hashedPassword = await bcrypt.hash(password, 10);
+    console.log('Hash généré:', hashedPassword);
 
-    // 4. Crée l'utilisateur en BDD
+    // Création de l'utilisateur avec vérification
     const user = new User({ email, password: hashedPassword });
     await user.save();
+    
+    // Vérification rétroactive
+    const verifyUser = await User.findById(user._id).select('+password');
+    const isMatch = await bcrypt.compare(password, verifyUser.password);
+    
+    if (!isMatch) {
+      await User.deleteOne({ _id: user._id });
+      throw new Error("Échec de vérification post-enregistrement");
+    }
 
-    // 5. Renvoie une réponse
-    res.status(201).json({ message: "Compte créé" });
+    res.status(201).json({ message: "Compte créé avec succès" });
 
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    console.error('Erreur inscription:', error);
+    res.status(500).json({ message: error.message || "Erreur serveur" });
   }
 };
 
-// connexion
 exports.login = async (req, res) => {
   try {
-    // 1. Cherche l'utilisateur par email
-    const user = await User.findOne({ email: req.body.email });
-    if (!user) {
-      return res.status(401).json({ message: "Identifiants invalides" });
-    }
-
-    // 2. Compare les mots de passe hashés
-    const validPassword = await bcrypt.compare(
-      req.body.password,
-      user.password
-    );
-    if (!validPassword) {
-      return res.status(401).json({ message: "Identifiants invalides" });
-    }
-
-    // 3. Génère un token JWT (session sécurisée)
-    const token = jwt.sign(
-      { userId: user._id, role: user.role }, // Données embarquées
-      process.env.JWT_SECRET, // Clé secrète
-      { expiresIn: "24h" } // Expiration
-    );
-
-    // 4. Renvoie le token
-    res.json({ userId: user._id, token });
+    const { email, password } = req.body;
     
-    mongoose.connect(process.env.MONGO_URI)
-    .then(() => console.log("✅ Connecté à MongoDB"))
-    .catch(err => console.error("❌ Erreur MongoDB:", err.message));
+    const user = await User.findOne({ email }).select('+password');
+    if (!user) return res.status(401).json({ message: "Identifiants invalides" });
+
+    console.log('Comparaison entre:');
+    console.log('Mot de passe reçu:', password);
+    console.log('Hash stocké:', user.password);
+
+    const isMatch = await bcrypt.compare(password, user.password);
+    console.log('Résultat comparaison:', isMatch);
+
+    if (!isMatch) return res.status(401).json({ message: "Identifiants invalides" });
+
+    res.json({ message: "Connexion réussie", user: { email: user.email, role: user.role } });
 
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    console.error('Erreur connexion:', error);
+    res.status(500).json({ message: "Erreur serveur" });
   }
 };

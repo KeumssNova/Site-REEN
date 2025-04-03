@@ -1,4 +1,9 @@
 const User = require('../models/User');
+const getMongoCollection = (collectionName) => {
+  return req.app.locals.mongoClient.db().collection(collectionName);
+};
+
+
 
 // Codes HTTP précis :
 
@@ -12,7 +17,13 @@ const User = require('../models/User');
 
 exports.getAllUsers = async (req, res) => {
     try {
-      const users = await User.find().select('-password');
+      
+      const usersCollection = getMongoCollection('users');
+      const users = await usersCollection.find(
+        {},
+        { projection: { password: 0 } // Exclut le password
+      }).toArray();
+
       res.json(users);
     } catch (error) {
       res.status(500).json({ message: "Erreur serveur" });
