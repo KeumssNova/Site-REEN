@@ -3,3 +3,16 @@
     height: 100vh;
 }
 
+.main-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .ia{
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}

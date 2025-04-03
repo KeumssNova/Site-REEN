@@ -30,7 +30,7 @@ export default function Inscription() {
 
       const success = await register(email, password);
       if (success) {
-        navigate('/');
+        navigate('/connexion');
       }
     } catch (err) {
       console.error('Erreur lors de l\'inscription:', err);

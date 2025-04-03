@@ -20,10 +20,18 @@ nav{
         display: flex;
         align-items: center;
     }
-    ul{
+    .public-header{
         display: flex;
         list-style: none;
         align-items: center;
         gap: 20px;
+    }
+}
+
+.Header-connexion-ul{
+    li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

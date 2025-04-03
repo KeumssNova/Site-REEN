@@ -12,7 +12,7 @@ export default function Header() {
       </div>
       <nav>
         <SearchBar />
-        <ul>
+        <ul className='public-header'>
           <li><Link to="/connexion">Connexion</Link></li>
           <li><Link to="/inscription">Inscription</Link></li>
         </ul>

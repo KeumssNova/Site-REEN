@@ -1,0 +1,47 @@
+.chatBox-Container{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    border-radius: 8px;
+    h3{
+        text-align: center;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        border-radius: 20px;
+        
+    }
+
+    textarea{
+        border-radius: 20px;
+        padding: 10px;
+        border: none;
+        color: white;
+        background-color: black;
+        height: auto;
+        outline: none;
+        width: 100%;
+        resize: none;
+    }
+}
+.form-btn{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        border: 1px solid rgba(255, 255, 255, 0.329);
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+    }
+}

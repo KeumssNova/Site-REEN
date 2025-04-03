@@ -7,6 +7,7 @@ import Inscription from './views/Inscription'
 import Contact from './views/Contact'
 import About from './views/About'
 import { PrivateRoute } from './routes/PrivateRoute'
+import Ia from './views/Ia'
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
       <Route element={<PrivateRoute />}>
         <Route path="/profil" element={<Profil />} />
         <Route path="/actualites" element={<Actualites />} />
+        <Route path="/IA" element={<Ia />} />
       </Route>
     </Routes>
   )
