@@ -4,6 +4,9 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useAuth } from '../context/AuthContext'; // Assurez-vous que c'est le bon chemin
 import '../assets/css/Inscription.css';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function Inscription() {
   const [email, setEmail] = useState('');
@@ -30,7 +33,9 @@ export default function Inscription() {
 
       const success = await register(email, password);
       if (success) {
-        navigate('/connexion');
+        toast.success(success.message);
+        setTimeout(() => navigate('/connexion'), 2000); // Redirection après 2s
+        
       }
     } catch (err) {
       console.error('Erreur lors de l\'inscription:', err);
@@ -90,6 +95,7 @@ export default function Inscription() {
           </p>
         </div>
       </div>
+      <ToastContainer/>
       <Footer />
     </div>
   );

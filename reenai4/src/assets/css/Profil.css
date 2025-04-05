@@ -1,17 +1,79 @@
-.profil {
+.container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  background-color: white;
+  width: 1000px;
+  height: 300px;
+  padding: 20px;
+  border-radius: 18px ;
+  gap: 40px;
+
+}
+
+.top{
+  display: flex;
+  align-items: center;
+  gap : 20px;
+  
+  .Btn{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    width: 500px;
+    gap: 1.25rem;
+    button {
+      height: 45px;
+      width: 200px;
+      border-radius: 18px ;
+      gap: 20px;
+
+    }
+  }
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 250px;
+  gap: 20px;
+}
+
+.bottom{
+
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  justify-content: space-between;
+
+
+  .pseudo{
+    background:url('../icons/person.svg') no-repeat;
+    background-size: 30px;
+    background-color: rgba(112, 107, 107, 0.26);
+    background-position: left 10px center;
   }
   
-  .profil h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
+  .mail{
+    background:url('../icons/envelope-fill.svg') no-repeat;
+    background-size: 30px;
+    background-color: rgba(112, 107, 107, 0.26);
+    background-position: left 10px center;
   }
-  
-  .profil p {
-    font-size: 16px;
-    color: #777;
+
+  input{
+    width: 400px;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    padding: 15px;
+    padding-left: 45px;
   }
+
+}
+
+

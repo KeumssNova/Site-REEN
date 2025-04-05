@@ -23,6 +23,10 @@
     color: #333;
     text-align: center;
   }
+
+  form{
+    height: 100%;
+  }
   
   .form-group {
     margin-bottom: 15px;

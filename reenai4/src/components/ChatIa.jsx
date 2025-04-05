@@ -9,8 +9,8 @@ export default function ChatIa() {
           <button className="plus-btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="25"
+              height="25"
               fill="currentColor"
               className="bi bi-plus-circle"
               viewBox="0 0 16 16"
@@ -22,8 +22,8 @@ export default function ChatIa() {
           <button className="valider-btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="25"
+              height="25"
               fill="currentColor"
               className="bi bi-arrow-up-circle"
               viewBox="0 0 16 16"

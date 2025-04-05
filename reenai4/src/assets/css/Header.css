@@ -29,6 +29,8 @@ nav{
 }
 
 .Header-connexion-ul{
+    display: flex;
+    gap: 20px;
     li{
         display: flex;
         justify-content: center;

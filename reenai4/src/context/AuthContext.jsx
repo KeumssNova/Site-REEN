@@ -63,12 +63,14 @@ export const AuthProvider = ({ children }) => {
         throw new Error(data.message || "Erreur d'inscription");
       }
 
+
+
       localStorage.setItem('user', JSON.stringify(data.user));
       setUser(data.user);
-      return true;
+      return { success:true, message: data.message };
     } catch (err) {
       setError(err.message || 'Erreur réseau');
-      return false;
+      return { success: false };
     } finally {
       setLoading(false);
     }

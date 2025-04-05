@@ -1,7 +1,8 @@
 import Footer from '../components/Footer';
-import BarreLateral from '../components/BarreLateral';
+import HistoriqueIa from '../components/HistoriqueIa';
 import ChatIa from '../components/ChatIa';
 import HeaderConnexion from '../components/HeaderConnexion';
+import '../assets/css/IA.css';
 
 export default function Ia() {
   return (
@@ -9,7 +10,7 @@ export default function Ia() {
       <HeaderConnexion />
       <div className='main'>
         <div className='BarreLateral'>
-        <BarreLateral />
+        <HistoriqueIa />
         </div>
         <div className='main-content'>
           <div className='ia'>
