@@ -5,6 +5,8 @@ import HeaderConnexion from '../components/HeaderConnexion';
 import '../assets/css/IA.css';
 
 export default function Ia() {
+  console.log('Rendu de la page IA');
+
   return (
     <div>
       <HeaderConnexion />

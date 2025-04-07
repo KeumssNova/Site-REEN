@@ -8,6 +8,7 @@ import Contact from './views/Contact'
 import About from './views/About'
 import { PrivateRoute } from './routes/PrivateRoute'
 import Ia from './views/Ia'
+import AdminPanel from './views/AdminPanel'
 
 export default function App() {
   return (
@@ -23,7 +24,8 @@ export default function App() {
       <Route element={<PrivateRoute />}>
         <Route path="/profil" element={<Profil />} />
         <Route path="/actualites" element={<Actualites />} />
-        <Route path="/IA" element={<Ia />} />
+        <Route path="/Ia" element={<Ia />} />
+        <Route path="/admin" element={<AdminPanel />} />
       </Route>
     </Routes>
   )

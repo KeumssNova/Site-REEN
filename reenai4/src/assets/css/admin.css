@@ -1,0 +1,33 @@
+.Card-User{
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 40px;
+}
+
+.User-info{
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 3px;
+    border: solid rgba(0, 0, 0, 0.199) 1px;
+
+}
+
+.card-title {
+    display: flex;
+    gap: 20px;
+}
+
+.card-role{
+    display: flex;
+    gap: 20px;
+
+}
+
+
+
+.main-admin{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}

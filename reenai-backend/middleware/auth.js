@@ -1,19 +1,41 @@
+const jwt = require('jsonwebtoken');
+
 const authenticate = (req, res, next) => {
     try {
         const token = req.headers.authorization.split(' ')[1];
         const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
-        req.userData = { userId: decodedToken.userId, role: decodedToken.role }; // Ajoute le rôle ici !
+        console.log('Token décodé:', decodedToken);  // Ajouter un log pour vérifier le contenu du token
+        
+        // Vérifie que decodedToken contient bien les informations attendues
+        if (!decodedToken || !decodedToken.userId || !decodedToken.roles) {
+            return res.status(401).json({ message: "Authentification échouée" });
+        }
+        
+        req.userData = {
+            userId: decodedToken.userId,
+            roles: decodedToken.roles || []
+        };
         next();
-    } catch {
+    } catch (error) {
+        console.error('Erreur lors de l\'authentification:', error);  // Log d'erreur détaillé
         res.status(401).json({ message: "Authentification échouée" });
     }
 };
 
-const isAdmin = (req, res, next) => {
-    if (req.userData.role !== 'admin') {
-        return res.status(403).json({ message: "Accès refusé : droits insuffisants" });
-    }
-    next();
+
+const authorizeRoles = (allowedRoles) => {
+    return (req, res, next) => {
+        if (!req.userData || !Array.isArray(req.userData.roles)) {
+            return res.status(403).json({ message: "Aucun rôle trouvé" });
+        }
+
+        const hasRole = req.userData.roles.some(role => allowedRoles.includes(role));
+        if (!hasRole) {
+            return res.status(403).json({ message: "Accès refusé : rôle insuffisant" });
+        }
+
+        next();
+    };
 };
 
-module.exports = { authenticate, isAdmin }; // Export nommé unique
+module.exports = { authenticate, authorizeRoles };

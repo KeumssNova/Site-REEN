@@ -1,15 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const adminController = require('../controllers/admin');
+const { authenticate, authorizeRoles } = require('../middleware/auth');
 
-// Middleware d'authentification et de vérification de rôle
-const { authenticate, isAdmin } = require('../middleware/auth');
-
-
-// Route protégée par authentification
-router.get('/users', authenticate, isAdmin, adminController.getAllUsers);
-router.delete('/users/:id', authenticate, isAdmin, adminController.deleteUser);
-
-
+// Appliquer le rôle 'admin' via authorizeRoles
+router.get('/users', authenticate, authorizeRoles(['admin']), adminController.getAllUsers);
+router.delete('/users/:id', authenticate, authorizeRoles(['admin']), adminController.deleteUser);
+router.put('/users/:id/role', authenticate, authorizeRoles(['admin']), adminController.updateUserRole);
 
 module.exports = router;

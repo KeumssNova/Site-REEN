@@ -34,6 +34,7 @@ export const AuthProvider = ({ children }) => {
         throw new Error(data.message || 'Identifiants incorrects');
       }
 
+      localStorage.setItem('token', data.token);
       localStorage.setItem('user', JSON.stringify(data.user));
       setUser(data.user);
       return true;
@@ -78,6 +79,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     localStorage.removeItem('user');
+    localStorage.removeItem('token');
     setUser(null);
     navigate('/connexion');
   };

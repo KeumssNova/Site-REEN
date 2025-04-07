@@ -1,0 +1,9 @@
+RAPPORT DE RÉCUPÉRATION DES FLUX RSS
+Date: 07/04/2025 20:42:20
+
+Nombre total d'articles récupérés: 48
+Nombre d'articles conservés après filtrage: 0
+
+ARTICLES CONSERVÉS PAR CATÉGORIE:
+
+DÉTAIL DES ARTICLES CONSERVÉS:

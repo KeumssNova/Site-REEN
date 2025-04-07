@@ -1,91 +1,10 @@
-// require('dotenv').config();
-// const express = require('express');
-// const cors = require('cors');
-// const connectDB = require('./config/db');
-
-// const app = express();
-
-// // Middleware
-// app.use(cors());
-// app.use(express.json());
-
-// // Connexion à la BDD
-// connectDB();
-
-// // Routes
-// app.use('/api/auth', require('./routes/auth'));
-// app.use('/api/admin', require('./routes/admin'));
-
-// const PORT = process.env.PORT || 5000;
-// app.listen(PORT, () => console.log(`le serveur est sur le port ${PORT}`));
-
-// const mongoose = require('mongoose');
-// mongoose.connect(process.env.MONGO_URI)
-//   .then(() => console.log("✅ Connecté à MongoDB Atlas"))
-//   .catch(err => console.log("❌ Erreur de connexion", err));
-
-// const { MongoClient, ServerApiVersion } = require('mongodb');
-
-// // Configuration (à remplacer par process.env en production)
-// const config = {
-//   username: 'salymdc',
-//   password: 'motdepasse',
-//   cluster: 'reenai-db.6aafrxa.mongodb.net',
-//   dbName: 'reenai-db'
-// };
-
-// // URI finale avec encodage sécurisé
-// const uri = `mongodb+srv://${encodeURIComponent(config.username)}:${encodeURIComponent(config.password)}@${config.cluster}/${config.dbName}?retryWrites=true&w=majority&authMechanism=SCRAM-SHA-1`;
-
-// const client = new MongoClient(uri, {
-//   serverApi: {
-//     version: ServerApiVersion.v1,
-//     strict: true,
-//     deprecationErrors: true,
-//   },
-//   connectTimeoutMS: 10000,  // 10 secondes timeout
-//   socketTimeoutMS: 45000    // 45 secondes timeout
-// });
-
-// async function run() {
-//   try {
-//     await client.connect();
-    
-//     // Test 1: Vérification basique
-//     await client.db().command({ ping: 1 });
-//     console.log('✅ Connexion établie avec succès');
-
-//     // Test 2: Vérification des accès
-//     const db = client.db(config.dbName);
-//     const collections = await db.listCollections().toArray();
-//     console.log(`📂 Collections disponibles (${collections.length}) :`, collections.map(c => c.name));
-
-//   } catch (error) {
-//     console.error('❌ Erreur critique :', error.message);
-    
-//     // Diagnostic automatique
-//     if (error.message.includes('bad auth')) {
-//       console.log('🔐 Problème d\'authentification :');
-//       console.log('- Vérifiez le nom d\'utilisateur/mot de passe dans Atlas');
-//       console.log('- Vérifiez que l\'utilisateur a les droits "readWrite" sur la base');
-//     } else if (error.message.includes('ENOTFOUND')) {
-//       console.log('🌐 Problème réseau :');
-//       console.log('- Vérifiez votre connexion Internet');
-//       console.log('- Essayez avec l\'URI alternative :');
-//       console.log(`mongodb://${config.username}:${config.password}@reenai-db-shard-00-00.6aafrxa.mongodb.net:27017,reenai-db-shard-00-01.6aafrxa.mongodb.net:27017,reenai-db-shard-00-02.6aafrxa.mongodb.net:27017/${config.dbName}?ssl=true&replicaSet=atlas-6aafrxa-shard-0&authSource=admin`);
-//     }
-//   } finally {
-//     await client.close();
-//   }
-// }
-
-// run();
-
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const { MongoClient } = require('mongodb');
 const mongoose = require('mongoose');
+const { spawn } = require('child_process'); // Pour exécuter le bot en arrière-plan
+const router = express.Router(); // Instancier un routeur express
 
 // Configuration
 const config = {
@@ -167,3 +86,46 @@ process.on('SIGINT', async () => {
   await app.locals.mongoClient?.close();
   process.exit(0);
 });
+
+let botProcess = null; // Déclare une variable pour stocker le processus du bot
+
+// Route pour démarrer le bot manuellement
+router.post('/start-bot', async (req, res) => {
+  try {
+    // On exécute le fichier du bot en arrière-plan
+    botProcess = spawn('node', ['./bot/index.js']);  // Modifie le chemin si nécessaire
+
+    botProcess.stdout.on('data', (data) => {
+      console.log(`stdout: ${data}`);
+    });
+
+    botProcess.stderr.on('data', (data) => {
+      console.error(`stderr: ${data}`);
+    });
+
+    botProcess.on('close', (code) => {
+      console.log(`Bot terminé avec le code ${code}`);
+    });
+
+    res.status(200).send('Bot démarré');
+  } catch (error) {
+    console.error('Erreur lors du démarrage du bot:', error);
+    res.status(500).send('Erreur lors du démarrage du bot');
+  }
+});
+
+// Route pour arrêter le bot manuellement
+router.post('/stop-bot', (req, res) => {
+  if (botProcess) {
+    botProcess.kill('SIGINT'); // Envoie le signal d'arrêt du processus
+    res.status(200).send('Bot arrêté');
+  } else {
+    res.status(400).send('Aucun bot en cours d\'exécution');
+  }
+});
+
+app.use('/api/bot', router);  // Utiliser le routeur avec le préfixe /api/bot
+
+
+
+module.exports = router;

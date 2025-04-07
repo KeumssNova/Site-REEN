@@ -16,7 +16,7 @@ export default function Connexion() {
     e.preventDefault();
     const success = await login(email, password);
     if (success) {
-      navigate('/IA');
+      navigate('/Ia');
     }
   };
 
@@ -48,7 +48,7 @@ export default function Connexion() {
               {loading ? 'Chargement...' : 'Se connecter'}
             </button>
             <div className="text-connexion">
-              <p>Vous n'avez pas de compte ? <Link to="/inscription">Inscription</Link></p>
+              <p>Vous n&apos;avez pas de compte ? <Link to="/inscription">Inscription</Link></p>
             </div>
           </form>
         </div>
