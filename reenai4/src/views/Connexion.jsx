@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import "../assets/css/Connexion.css";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
@@ -10,7 +10,13 @@ export default function Connexion() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-  const { login, error, loading } = useAuth();
+  const { user, login, error, loading } = useAuth();
+
+  useEffect(() => {
+    if (user) {
+      navigate('/Ia'); // Si l'utilisateur est connecté, rediriger vers la page d'accueil ou une autre page protégée
+    }
+  }, [user, navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

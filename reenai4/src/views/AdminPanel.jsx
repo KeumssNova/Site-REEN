@@ -80,11 +80,19 @@ export default function AdminPanel() {
         {error && <p className="error">{error}</p>}
         <div className="Container">
         <h2>Gestion des utilisateurs</h2>
+          <div><h3 className="ListeName">Liste d'utilisateurs</h3></div>
           <div className="Card-User">
+
             {users.map((user) => (
               <div className="User-info" key={user._id}>
                 <div className="card-title">
-                  <h4>{user.email}</h4> - <p>{user.roles}</p>
+                  <h3>{user.pseudo ? user.pseudo : `Utilisateur ${user._id.slice(-4)}`}</h3>
+                  <div className="user-photo-admin">
+                    <img src={user.photo ? `http://localhost:5000${user.photo}` : '../assets/icons/no-photo.jpg'} alt="Photo de profil" />
+                  </div>
+                  <div className="user-mail">
+                    <h4>{user.email}</h4> - <p>{user.roles}</p>
+                  </div>
                 </div>
                 <div className="card-role">
                   <caption>Role ?</caption>

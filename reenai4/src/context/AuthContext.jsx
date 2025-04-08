@@ -9,10 +9,42 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  const logout = () => {
+    localStorage.removeItem('user');
+    localStorage.removeItem('token');
+    setUser(null);
+    navigate('/connexion');
+  };
+
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
+    const token = localStorage.getItem('token');
+  
+    if (storedUser && token) {
+      const parsedUser = JSON.parse(storedUser);
+      // Vérification de la validité du token côté serveur
+      const verifyToken = async () => {
+        try {
+          const response = await fetch('http://localhost:5000/api/auth/verify-token', {
+            method: 'GET',
+            headers: {
+              'Authorization': `Bearer ${token}`
+            }
+          });
+  
+          if (response.ok) {
+            setUser(parsedUser);  // L'utilisateur est toujours valide
+          } else {
+            // Token invalide ou expiré, déconnecter l'utilisateur
+            logout();
+          }
+        } catch (err) {
+          console.error('Erreur de vérification du token', err);
+          logout();
+        }
+      };
+  
+      verifyToken();
     }
   }, []);
 
@@ -77,12 +109,7 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const logout = () => {
-    localStorage.removeItem('user');
-    localStorage.removeItem('token');
-    setUser(null);
-    navigate('/connexion');
-  };
+
 
   return (
     <AuthContext.Provider value={{

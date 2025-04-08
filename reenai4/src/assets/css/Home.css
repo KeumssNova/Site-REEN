@@ -1,6 +1,9 @@
 .main{
     display: flex;
-    height: 100vh;
+}
+
+.ia{
+    height: 100%;
 }
 
 .main-content{
@@ -15,4 +18,14 @@
         align-items: center;
     }
     
+}
+.newsContainer{
+    height: auto; /* Enlève la hauteur fixe pour un comportement dynamique */
+}
+.News{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    padding: 20px;
+    height: 100%; 
+    grid-gap: 20px;
 }

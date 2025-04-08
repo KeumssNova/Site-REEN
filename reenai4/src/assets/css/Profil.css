@@ -1,40 +1,92 @@
-.container{
+.container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.card{
+.card {
   background-color: white;
   width: 1000px;
   height: 300px;
   padding: 20px;
-  border-radius: 18px ;
+  border-radius: 18px;
   gap: 40px;
-
+  box-shadow:0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.top{
+.Photo img {
+  width: 100px; /* Ajuste la taille en fonction de la taille de la photo */
+  height: 100px;
+  border-radius: 12%; /* Si tu veux un cercle */
+  overflow: hidden; /* Cache les parties de l'image qui débordent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top {
   display: flex;
   align-items: center;
-  gap : 20px;
-  
-  .Btn{
+  gap: 20px;
+
+  .Btn {
     display: flex;
     width: 500px;
     gap: 1.25rem;
+    align-items: center;
+    
+    .changePhotoContainer{
+      width: 200px;
+      height: 45px;
+      background-color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+      border-radius: 18px;
+    }
+
+    .changePhotoBtn{
+      color: white;
+
+      text-align: center;
+      font-size: 16px;
+    }
+    input[type="file"] {
+      display: none;
+    }
     button {
       height: 45px;
       width: 200px;
-      border-radius: 18px ;
+      border-radius: 18px;
       gap: 20px;
-
     }
   }
-}
 
-form{
+  /* Style spécifique pour l'input file */
+
+
+  .changePhotoContainer:hover {
+    background-color: #ff6347;
+    cursor: pointer;
+  }
+  .changePhotoBtn:hover {
+    cursor: pointer;
+  }
+
+
+   input[type="file"]::-webkit-file-upload-button {
+    background-color: inherit;
+    color: inherit;
+    border: inherit;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+  }
+} 
+
+form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -42,29 +94,27 @@ form{
   gap: 20px;
 }
 
-.bottom{
-
+.bottom {
   display: flex;
   flex-direction: column;
   height: 150px;
   justify-content: space-between;
 
-
-  .pseudo{
-    background:url('../icons/person.svg') no-repeat;
-    background-size: 30px;
-    background-color: rgba(112, 107, 107, 0.26);
-    background-position: left 10px center;
-  }
-  
-  .mail{
-    background:url('../icons/envelope-fill.svg') no-repeat;
+  .pseudo {
+    background: url("../icons/person.svg") no-repeat;
     background-size: 30px;
     background-color: rgba(112, 107, 107, 0.26);
     background-position: left 10px center;
   }
 
-  input{
+  .mail {
+    background: url("../icons/envelope-fill.svg") no-repeat;
+    background-size: 30px;
+    background-color: rgba(112, 107, 107, 0.26);
+    background-position: left 10px center;
+  }
+
+  input {
     width: 400px;
     height: 40px;
     border-radius: 6px;
@@ -73,7 +123,4 @@ form{
     padding: 15px;
     padding-left: 45px;
   }
-
 }
-
-

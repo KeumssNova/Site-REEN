@@ -2,13 +2,13 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './views/Home'
 import Connexion from './views/Connexion'
 import Profil from './views/Profil'
-import Actualites from './views/Actualites'
 import Inscription from './views/Inscription'
 import Contact from './views/Contact'
 import About from './views/About'
 import { PrivateRoute } from './routes/PrivateRoute'
 import Ia from './views/Ia'
 import AdminPanel from './views/AdminPanel'
+import NewsList from './views/NewsList'
 
 export default function App() {
   return (
@@ -19,11 +19,11 @@ export default function App() {
       <Route path="/inscription" element={<Inscription />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/entreprise" element={<About />} />
+      <Route path="/News" element={<NewsList />} />
 
       {/* Routes protégées */}
       <Route element={<PrivateRoute />}>
         <Route path="/profil" element={<Profil />} />
-        <Route path="/actualites" element={<Actualites />} />
         <Route path="/Ia" element={<Ia />} />
         <Route path="/admin" element={<AdminPanel />} />
       </Route>
