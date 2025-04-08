@@ -5,6 +5,11 @@ const { MongoClient } = require('mongodb');
 const mongoose = require('mongoose');
 const { spawn } = require('child_process'); // Pour exécuter le bot en arrière-plan
 const router = express.Router(); // Instancier un routeur express
+const path = require('path');
+const jsdom = require('jsdom')
+const {JSDOM} = jsdom;  
+const axios = require('axios');
+
 
 // Configuration
 const config = {
@@ -127,5 +132,136 @@ router.post('/stop-bot', (req, res) => {
 app.use('/api/bot', router);  // Utiliser le routeur avec le préfixe /api/bot
 
 
+const userRoutes = require('./routes/user'); //
+app.use('/api/user', userRoutes);
+
+// Applique CORS pour autoriser toutes les requêtes (ajuste selon tes besoins)
+app.use(cors());
+
+// Serve les fichiers du dossier uploads (photos)
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+// Middleware pour afficher l'accès aux fichiers téléchargés dans la console (optionnel, pour déboguer)
+app.use('/uploads', (req, res, next) => {
+  console.log('Accès au dossier uploads:', req.url);
+  next();
+});
+
+app.get('/api/auth/verify-token', (req, res) => {
+  const token = req.headers['authorization']?.split(' ')[1]; 
+
+  if (!token) {
+    return res.status(401).json({ message: 'Token manquant' });
+  }
+
+  // Vérifier le token avec code secret 
+  jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+    if (err) {
+      return res.status(401).json({ message: 'Token invalide ou expiré' });
+    }
+
+
+    res.status(200).json({ message: 'Token valide', user: decoded });
+  });
+});
+
+const fs = require('fs');
+
+const NodeCache = require("node-cache");
+const myCache = new NodeCache();
+const fetch = require('node-fetch');
+
+const fetchWithRetry = async (url, attempts = 3, delay = 2000) => {
+  for (let i = 0; i < attempts; i++) {
+    try {
+      return await axios.get(url, { timeout: 7000 });
+    } catch (err) {
+      console.warn(`⏱️ Tentative ${i + 1} échouée pour ${url}`);
+      await new Promise(res => setTimeout(res, delay));
+    }
+  }
+  throw new Error(`❌ Échec après ${attempts} tentatives pour ${url}`);
+};
+
+// Route principale
+app.get('/api/articles', async (req, res) => {
+  const filePath = path.join(__dirname, "./bot/output/ai_training_data.jsonl");
+
+  fs.readFile(filePath, 'utf-8', async (err, data) => {
+    if (err) {
+      return res.status(500).json({ error: 'Erreur lors de la lecture du fichier' });
+    }
+
+    const articles = data
+      .split('\n')
+      .filter(Boolean)
+      .map(line => JSON.parse(line))
+      .filter(article => article.title && article.source);
+
+    const articlesWithImages = await Promise.all(articles.slice(-4).map(async (article) => {
+      const cachedImage = myCache.get(article.source);
+      if (cachedImage) {
+        article.image = cachedImage;
+        return article;
+      }
+
+      try {
+        const response = await fetchWithRetry(article.source);
+        const dom = new JSDOM(response.data);
+        const image = dom.window.document.querySelector('img');
+
+        article.image = image?.src || '/default-image.jpg';
+        myCache.set(article.source, article.image, 3600); // cache 1h
+      } catch (error) {
+        console.error(`Erreur image (${article.title}):`, error.message);
+        article.image = '/default-image.jpg';
+      }
+
+      return article;
+    }));
+
+    res.json(articlesWithImages);
+  });
+});
+
+app.get('/api/all-articles', async (req, res) => {
+  const filePath = path.join(__dirname, "./bot/output/ai_training_data.jsonl");
+
+  fs.readFile(filePath, 'utf-8', async (err, data) => {
+    if (err) {
+      return res.status(500).json({ error: 'Erreur lors de la lecture du fichier' });
+    }
+
+    const articles = data
+      .split('\n')
+      .filter(Boolean)
+      .map(line => JSON.parse(line))
+      .filter(article => article.title && article.source);
+
+    const articlesWithImages = await Promise.all(articles.map(async (article) => {
+      const cachedImage = myCache.get(article.source);
+      if (cachedImage) {
+        article.image = cachedImage;
+        return article;
+      }
+
+      try {
+        const response = await fetchWithRetry(article.source);
+        const dom = new JSDOM(response.data);
+        const image = dom.window.document.querySelector('img');
+
+        article.image = image?.src || '/default-image.jpg';
+        myCache.set(article.source, article.image, 3600); // Cache 1h
+      } catch (error) {
+        console.error(`Erreur image (${article.title}):`, error.message);
+        article.image = '/default-image.jpg';
+      }
+
+      return article;
+    }));
+
+    res.json(articlesWithImages);
+  });
+});
 
 module.exports = router;

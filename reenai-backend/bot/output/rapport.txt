@@ -1,9 +1,288 @@
 RAPPORT DE RÉCUPÉRATION DES FLUX RSS
-Date: 07/04/2025 20:42:20
+Date: 08/04/2025 15:54:37
 
-Nombre total d'articles récupérés: 48
-Nombre d'articles conservés après filtrage: 0
+Nombre total d'articles récupérés: 168
+Nombre d'articles conservés après filtrage: 54
 
 ARTICLES CONSERVÉS PAR CATÉGORIE:
+- Monde: 26 articles
+- Éducation: 12 articles
+- Sécurité: 21 articles
+- politique: 37 articles
+- Économie: 10 articles
+- santé: 5 articles
 
 DÉTAIL DES ARTICLES CONSERVÉS:
+1. " Ouverture à Dakar d'une conférence sur l'emploi des jeunes en Afrique subsaharienne" (Score: 3)
+   - Monde: afrique (1)
+   - Éducation: emploi (2)
+   Lien: http://www.panapress.com/Ouverture-a-Dakar-d'une-conferen-a_851795-lang1.html
+
+2. "L'enlèvement des jeunes Nigérianes s'invite à l'ouverture des 2èmes Jeux africains de la jeunesse" (Score: 2)
+   - Monde: continent (1)
+   - Éducation: jeunesse (1)
+   Lien: http://www.panapress.com/L'enlevement-des-jeunes-Nigerian-a_851794-lang1.html
+
+3. "Ban Ki-moon condamne l'attaque perpétrée près de Mogadiscio" (Score: 2)
+   - Sécurité: attaque (1), ONU (1)
+   Lien: http://www.panapress.com/Ban-Ki-moon-condamne-l'attaque-p-a_851790-lang1.html
+
+4. "La BID va financer l'étude de faisabilité d'une route dans le Nord-est du Mali" (Score: 4)
+   - Monde: développement (1)
+   - politique: gouvernement (1), loi (1)
+   - Économie: banque (1)
+   Lien: http://www.panapress.com/La-BID-va-financer-l'etude-de-fa-a_851788-lang1.html
+
+5. "Le Sénégal placé au 62ème rang dans le classement mondial de la liberté de la presse" (Score: 1)
+   - Monde: presse (1)
+   Lien: http://www.panapress.com/Le-Senegal-place-au-62eme-rang-d-a_851787-lang1.html
+
+6. "Ban Ki-moon invite les animateurs de radio à promouvoir l'égalité entre les sexes" (Score: 1)
+   - Sécurité: ONU (1)
+   Lien: http://www.panapress.com/Ban-Ki-moon-invite-les-animateur-a_851785-lang1.html
+
+7. "Le Commissaire européen au développement au Sommet de l'UA" (Score: 2)
+   - Monde: développement (1)
+   - politique: gouvernement (1)
+   Lien: http://www.panapress.com/Le-Commissaire-europeen-au-devel-a_851782-lang1.html
+
+8. "Ouverture à Dakar d'une conférence sur l'emploi des jeunes en Afrique subsaharienne " (Score: 3)
+   - Monde: afrique (1)
+   - Éducation: emploi (2)
+   Lien: http://www.panapress.com/Ouverture-a-Dakar-d'une-conferen-a_851781-lang1.html
+
+9. "Le dollar américain et le rand sud-africain en baisse, le franc suisse en hausse face au franc CFA" (Score: 3)
+   - Monde: afrique (1), africain (1)
+   - Économie: banque (1)
+   Lien: http://www.panapress.com/Le-dollar-americain-et-le-rand-s-a_851777-lang1.html
+
+10. "Africa gets first female bishop" (Score: 1)
+   - Monde: continent (1)
+   Lien: http://www.panapress.com/Africa-gets-first-female-bishop-a_851779-lang2.html
+
+11. "Mayotte: les syndicats appellent à une grève illimitée en marge de la visite de Manuel Valls" (Score: 6)
+   - Monde: développement (2)
+   - politique: loi (4)
+   Lien: https://www.rfi.fr/fr/france/20250408-mayotte-les-syndicats-appellent-%C3%A0-une-gr%C3%A8ve-illimit%C3%A9e-en-marge-de-la-visite-de-manuel-valls
+
+12. "Disparition d'Amara Essy, figure emblématique de la diplomatie ivoirienne" (Score: 10)
+   - Monde: africain (1), union africaine (1)
+   - politique: politique (1), président (6)
+   - Sécurité: ONU (1)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-disparition-d-amara-essy-figure-embl%C3%A9matique-de-la-diplomatie-ivoirienne
+
+13. "Ouganda: des victimes d'un ex-seigneur de guerre mitigées suite aux indemnisations promises par la CPI" (Score: 4)
+   - Sécurité: armée (2)
+   - santé: maladie (2)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-ouganda-des-victimes-d-un-ex-seigneur-de-guerre-mitig%C3%A9es-suite-aux-indemnisations-promises-par-la-cpi
+
+14. "Droits de douane américains: la réponse européenne se prépare, bourbon et whisky épargnés" (Score: 2)
+   - politique: politique (1)
+   - Économie: agriculture (1)
+   Lien: https://www.rfi.fr/fr/europe/20250408-droits-de-douane-am%C3%A9ricains-la-r%C3%A9ponse-europ%C3%A9enne-se-pr%C3%A9pare-bourbon-et-whisky-%C3%A9pargn%C3%A9s
+
+15. "Qui est Peter Navarro, «le tsar des tarifs douaniers», qui a inspiré Donald Trump?" (Score: 9)
+   - politique: politique (5), président (2)
+   - Économie: marché (1)
+   - Sécurité: attaque (1)
+   Lien: https://www.rfi.fr/fr/am%C3%A9riques/20250408-peter-navarro-le-tsar-des-tarifs-derri%C3%A8re-la-politique-commerciale-de-donald-trumpn
+
+16. "L’Atlantic Music Expo 2025 veut continuer à sauvegarder ce trésor culturel du Cap-Vert" (Score: 3)
+   - politique: gouvernement (1), démocratie (1)
+   - Sécurité: paix (1)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-l-atlantic-music-expo-2025-veut-continuer-%C3%A0-sauvegarder-ce-tr%C3%A9sor-culturel-du-cap-vert
+
+17. "Nigeria: un influenceur écope de six mois ferme pour avoir jeté des billets durant un mariage" (Score: 3)
+   - politique: loi (1)
+   - Économie: banque (2)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-nigeria-un-influenceur-prend-six-mois-ferme-pour-avoir-jet%C3%A9-des-billets-durant-un-mariage
+
+18. "Basket: le projet de NBA Europe est «une menace» selon l'Euroligue" (Score: 2)
+   - politique: président (2)
+   Lien: https://www.rfi.fr/fr/sports/20250408-basket-le-projet-de-nba-europe-est-une-menace-selon-l-euroligue
+
+19. "Quels buts recherche la Russie en ratifiant un traité de partenariat avec l'Iran?" (Score: 7)
+   - Monde: coopération (2)
+   - politique: président (1)
+   - Sécurité: terrorisme (1), militaire (3)
+   Lien: https://www.rfi.fr/fr/monde/20250408-quels-buts-recherche-la-russie-en-ratifiant-un-trait%C3%A9-de-partenariat-avec-l-iran
+
+20. "RDC: trop d'intervenants et de confusion, les contrats de lobbying avec des cabinets américains suspendus" (Score: 4)
+   - Monde: développement (1)
+   - politique: politique (1), président (2)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-rdc-trop-d-intervenants-et-de-confusion-les-contrats-de-lobbying-avec-des-cabinets-am%C3%A9ricains-suspendus
+
+21. "RDC: le parti de l'ex-président Kabila fait sa grande rentrée et vante sa «résistance» face au régime Tshisekedi" (Score: 11)
+   - politique: politique (3), président (3), gouvernement (1), démocratie (1), parlement (1)
+   - Sécurité: militaire (1)
+   - Éducation: formation (1)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-rdc-le-parti-de-l-ex-pr%C3%A9sident-kabila-fait-sa-grande-rentr%C3%A9e-et-vante-sa-r%C3%A9sistance-face-au-r%C3%A9gime-tshisekedi
+
+22. "Les avocats de la Cour suprême du Tchad dénoncent le fonctionnement de la plus haute juridiction du pays" (Score: 2)
+   - politique: président (2)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-les-avocats-de-la-cour-supr%C3%AAme-du-tchad-d%C3%A9noncent-le-fonctionnement-de-la-plus-haute-juridiction-du-pays
+
+23. "Paula White-Cain, porte-drapeau de la croisade ultra-conservatrice de Donald Trump" (Score: 6)
+   - politique: politique (1), président (2)
+   - Éducation: emploi (1), culture (1), religion (1)
+   Lien: https://www.rfi.fr/fr/am%C3%A9riques/20250408-paula-white-cain-porte-drapeau-de-la-croisade-ultra-conservatrice-de-donald-trump
+
+24. "Bensebaini, Diaz, Guirassy, Hakimi et Partey, ces Africains toujours en lice en Ligue des champions" (Score: 2)
+   - Monde: africain (1)
+   - Sécurité: attaque (1)
+   Lien: https://www.rfi.fr/fr/afrique-foot/20250408-bensebaini-diaz-guirassy-hakimi-et-partey-ces-africains-toujours-en-lice-en-ligue-des-champions
+
+25. "Corée du Sud: l'élection présidentielle anticipée aura lieu le 3 juin prochain" (Score: 12)
+   - politique: politique (2), président (8), gouvernement (1), transition (1)
+   Lien: https://www.rfi.fr/fr/asie-pacifique/20250408-cor%C3%A9e-du-sud-l-%C3%A9lection-pr%C3%A9sidentielle-anticip%C3%A9e-aura-lieu-le-3-juin-prochain
+
+26. "En Côte d’Ivoire, le parcours du combattant de familles d’enfants autistes" (Score: 1)
+   - Monde: développement (1)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-en-c%C3%B4te-d-ivoire-le-parcours-du-combattant-de-familles-d-enfants-autistes
+
+27. "La Cour suprême suspend l'interdiction des expulsions décidées par Trump en vertu d'une loi de 1798" (Score: 5)
+   - politique: président (3), loi (2)
+   Lien: https://www.rfi.fr/fr/am%C3%A9riques/20250408-la-cour-supr%C3%AAme-suspend-l-interdiction-des-expulsions-d%C3%A9cid%C3%A9es-par-trump-en-vertu-d-une-loi-de-1798
+
+28. "Ahmed Mansour, journaliste pour Palestine Today, brûlé vif à Khan Younès, dans le sud de la bande de Gaza" (Score: 4)
+   - Monde: presse (2)
+   - Sécurité: armée (2)
+   Lien: https://www.rfi.fr/fr/moyen-orient/20250408-ahmed-mansour-journaliste-pour-palestine-today-br%C3%BBl%C3%A9-vif-%C3%A0-khan-youn%C3%A8s-dans-le-sud-de-la-bande-de-gaza
+
+29. "Les Haïtiens s'inquiètent du durcissement des mesures de la République dominicaine contre les migrants" (Score: 6)
+   - Monde: journal (1)
+   - politique: président (1), gouvernement (2), transition (1)
+   - santé: climat (1)
+   Lien: https://www.rfi.fr/fr/am%C3%A9riques/20250408-les-ha%C3%AFtiens-s-inqui%C3%A8tent-du-durcissement-des-mesures-de-la-r%C3%A9publique-dominicaine-contre-les-migrants
+
+30. "Mort de la Kényane Agnes Wanjiru: l’affaire est à l’arrêt selon sa famille qui met en cause l'armée britannique" (Score: 4)
+   - politique: parlement (1)
+   - Sécurité: armée (2)
+   - Éducation: formation (1)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-mort-de-la-k%C3%A9nyane-agnes-wanjiru-l-affaire-est-%C3%A0-l-arr%C3%AAt-selon-sa-famille-qui-met-en-cause-l-arm%C3%A9e-britannique
+
+31. "Le Soudan du Sud déplore une «vaste révocation de visas pour les États-Unis sur la base d’un incident isolé»" (Score: 5)
+   - Monde: coopération (2)
+   - politique: gouvernement (3)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-le-soudan-du-sud-d%C3%A9plore-une-vaste-r%C3%A9vocation-de-visas-pour-les-%C3%A9tats-unis-sur-la-base-d-un-incident-isol%C3%A9
+
+32. "Oboy, l’assurance du succès avec «Olyboy»" (Score: 1)
+   - Éducation: langue (1)
+   Lien: https://www.rfi.fr/fr/musique/20250408-oboy-l-assurance-du-succ%C3%A8s-avec-olyboy
+
+33. "Les diplomates américains interdits d’entretenir des relations amoureuses avec des citoyens chinois" (Score: 2)
+   - politique: politique (1), gouvernement (1)
+   Lien: https://www.rfi.fr/fr/asie-pacifique/20250408-les-diplomates-am%C3%A9ricains-interdits-d-entretenir-des-relations-amoureuses-avec-des-citoyens-chinois
+
+34. "RDC: le parti de l'ex-président Kabila fait sa grande rentrée et vante sa «résistance» face au régime Tshisekedi" (Score: 11)
+   - politique: politique (3), président (3), gouvernement (1), démocratie (1), parlement (1)
+   - Sécurité: militaire (1)
+   - Éducation: formation (1)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-rdc-le-parti-de-l-ex-pr%C3%A9sident-kabila-fait-sa-grande-rentr%C3%A9e-et-vante-sa-r%C3%A9sistance-face-au-r%C3%A9gime-tshisekedi
+
+35. "Algérie-Mali: jusqu'où ira l'affrontement suscité par le drone abattu à Tinzaouatène?" (Score: 15)
+   - politique: politique (1), gouvernement (1), transition (3)
+   - Sécurité: armée (3), terrorisme (2), conflit (2), militaire (3)
+   Lien: https://www.rfi.fr/fr/afrique/20250407-alg%C3%A9rie-mali-jusqu-o%C3%B9-ira-l-affrontement-suscit%C3%A9-par-le-drone-abattu-%C3%A0-tinazouat%C3%A8ne
+
+36. "RDC: trop d'intervenants et de confusion, les contrats de lobbying avec des cabinets américains suspendus" (Score: 4)
+   - Monde: développement (1)
+   - politique: politique (1), président (2)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-rdc-trop-d-intervenants-et-de-confusion-les-contrats-de-lobbying-avec-des-cabinets-am%C3%A9ricains-suspendus
+
+37. "Disparition d'Amara Essy, figure emblématique de la diplomatie ivoirienne" (Score: 10)
+   - Monde: africain (1), union africaine (1)
+   - politique: politique (1), président (6)
+   - Sécurité: ONU (1)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-disparition-d-amara-essy-figure-embl%C3%A9matique-de-la-diplomatie-ivoirienne
+
+38. "Nigeria: un influenceur écope de six mois ferme pour avoir jeté des billets durant un mariage" (Score: 3)
+   - politique: loi (1)
+   - Économie: banque (2)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-nigeria-un-influenceur-prend-six-mois-ferme-pour-avoir-jet%C3%A9-des-billets-durant-un-mariage
+
+39. "Ouganda: des victimes d'un ex-seigneur de guerre mitigées suite aux indemnisations promises par la CPI" (Score: 4)
+   - Sécurité: armée (2)
+   - santé: maladie (2)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-ouganda-des-victimes-d-un-ex-seigneur-de-guerre-mitig%C3%A9es-suite-aux-indemnisations-promises-par-la-cpi
+
+40. "Bensebaini, Diaz, Guirassy, Hakimi et Partey, ces Africains toujours en lice en Ligue des champions" (Score: 2)
+   - Monde: africain (1)
+   - Sécurité: attaque (1)
+   Lien: https://www.rfi.fr/fr/afrique-foot/20250408-bensebaini-diaz-guirassy-hakimi-et-partey-ces-africains-toujours-en-lice-en-ligue-des-champions
+
+41. "Le Soudan du Sud déplore une «vaste révocation de visas pour les États-Unis sur la base d’un incident isolé»" (Score: 5)
+   - Monde: coopération (2)
+   - politique: gouvernement (3)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-le-soudan-du-sud-d%C3%A9plore-une-vaste-r%C3%A9vocation-de-visas-pour-les-%C3%A9tats-unis-sur-la-base-d-un-incident-isol%C3%A9
+
+42. "RDC: les inondations à Kinshasa auraient pu être mieux anticipées, selon des scientifiques" (Score: 4)
+   - Monde: afrique (1)
+   - politique: président (1)
+   - santé: eau (2)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-rdc-les-inondations-%C3%A0-kinshasa-auraient-pu-%C3%AAtre-mieux-anticip%C3%A9es-selon-des-scientifiques
+
+43. "L’Atlantic Music Expo 2025 veut continuer à sauvegarder ce trésor culturel du Cap-Vert" (Score: 3)
+   - politique: gouvernement (1), démocratie (1)
+   - Sécurité: paix (1)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-l-atlantic-music-expo-2025-veut-continuer-%C3%A0-sauvegarder-ce-tr%C3%A9sor-culturel-du-cap-vert
+
+44. "Les avocats de la Cour suprême du Tchad dénoncent le fonctionnement de la plus haute juridiction du pays" (Score: 2)
+   - politique: président (2)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-les-avocats-de-la-cour-supr%C3%AAme-du-tchad-d%C3%A9noncent-le-fonctionnement-de-la-plus-haute-juridiction-du-pays
+
+45. "Seidik Abba: «On s'installe dans une confrontation entre les pays de l'AES et le pouvoir algérien»" (Score: 7)
+   - politique: politique (1), président (1)
+   - Économie: pétrole (3)
+   - Sécurité: armée (2)
+   Lien: https://www.rfi.fr/fr/podcasts/le-grand-invit%C3%A9-afrique/20250408-seidik-abba-on-s-installe-dans-une-confrontation-entre-les-pays-de-l-aes-et-le-pouvoir-alg%C3%A9rien
+
+46. "Ghana: les autorités cherchent le moyen de réduire la portée des nouveaux droits de douane américains" (Score: 8)
+   - Monde: afrique (1), africain (2), continent (2)
+   - politique: gouvernement (1)
+   - Économie: pétrole (1)
+   - Éducation: emploi (1)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-ghana-les-autorit%C3%A9s-cherchent-le-moyen-de-r%C3%A9duire-la-port%C3%A9e-des-nouveaux-droits-de-douane-am%C3%A9ricains
+
+47. "Mort de la Kényane Agnes Wanjiru: l’affaire est à l’arrêt selon sa famille qui met en cause l'armée britannique" (Score: 4)
+   - politique: parlement (1)
+   - Sécurité: armée (2)
+   - Éducation: formation (1)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-mort-de-la-k%C3%A9nyane-agnes-wanjiru-l-affaire-est-%C3%A0-l-arr%C3%AAt-selon-sa-famille-qui-met-en-cause-l-arm%C3%A9e-britannique
+
+48. "En Côte d’Ivoire, le parcours du combattant de familles d’enfants autistes" (Score: 1)
+   - Monde: développement (1)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-en-c%C3%B4te-d-ivoire-le-parcours-du-combattant-de-familles-d-enfants-autistes
+
+49. "Soudan: situation humanitaire catastrophique à El-Fasher après un an de siège des FSR" (Score: 14)
+   - politique: gouvernement (2)
+   - Économie: marché (1)
+   - Sécurité: armée (6), attaque (1), ONU (3)
+   - santé: eau (1)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-soudan-situation-humanitaire-catastrophique-%C3%A0-el-fasher-apr%C3%A8s-un-an-de-si%C3%A8ge-des-fsr
+
+50. "Présidentielle au Gabon: la campagne est entrée dans la dernière ligne droite" (Score: 5)
+   - politique: politique (1), président (1), transition (3)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-pr%C3%A9sidentielle-au-gabon-la-campagne-est-entr%C3%A9e-dans-la-derni%C3%A8re-ligne-droite
+
+51. "Présidentielle au Gabon: les principales propositions des candidats" (Score: 7)
+   - Monde: développement (1)
+   - politique: politique (1), président (2), transition (1), coup d'État (1)
+   - Économie: entreprise (1)
+   Lien: https://www.rfi.fr/fr/afrique/20250404-pr%C3%A9sidentielle-au-gabon-les-principales-propositions-des-candidats
+
+52. "Rwanda: le conflit dans l'est de la RDC s'invite au lancement des commémorations 2025 du génocide" (Score: 4)
+   - politique: président (2)
+   - Sécurité: conflit (2)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-rwanda-le-conflit-dans-l-est-de-la-rdc-s-invite-au-lancement-des-comm%C3%A9morations-du-31e-anniversaire-du-g%C3%A9nocide
+
+53. "Tunisie: les syndicats étudiants décrètent une grève générale en soutien aux Palestiniens de Gaza" (Score: 1)
+   - Éducation: jeunesse (1)
+   Lien: https://www.rfi.fr/fr/afrique/20250408-tunisie-les-syndicats-%C3%A9tudiants-d%C3%A9cr%C3%A8tent-une-gr%C3%A8ve-g%C3%A9n%C3%A9rale-en-soutien-aux-palestiniens-de-gaza
+
+54. "Niger: le haoussa devient langue nationale, le français réduit à une simple langue de travail" (Score: 10)
+   - Monde: journal (1)
+   - politique: président (1), coup d'État (1)
+   - Éducation: langue (7)
+   Lien: https://www.rfi.fr/fr/afrique/20250407-niger-le-haoussa-devient-langue-nationale-le-fran%C3%A7ais-r%C3%A9duit-%C3%A0-une-simple-langue-de-travail
+

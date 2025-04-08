@@ -76,98 +76,7 @@ const RSS_FEEDS = [
   "https://www.africaintelligence.com/rss", // Africa Intelligence
   "http://www.rfi.fr/general/rss",
   "http://www.rfi.fr/afrique/rss",
-  "http://www.rfi.fr/afrique/actu/rss",
-  "http://www.rfi.fr/afrique/archives/rss",
-  "http://www.rfi.fr/afrique/archives/201407/rss",
-  "http://www.rfi.fr/afrique/archives/201408/rss",
-  "http://www.rfi.fr/afrique/archives/201409/rss",
-  "http://www.rfi.fr/afrique/archives/201410/rss",
-  "http://www.rfi.fr/afrique/archives/201411/rss",
-  "http://www.rfi.fr/afrique/archives/201412/rss",
-  "http://www.rfi.fr/afrique/archives/201501/rss",
-  "http://www.rfi.fr/afrique/archives/201502/rss",
-  "http://www.rfi.fr/afrique/archives/201503/rss",
-  "http://www.rfi.fr/afrique/archives/201504/rss",
-  "http://www.rfi.fr/afrique/archives/201505/rss",
-  "http://www.rfi.fr/afrique/archives/201506/rss",
-  "http://www.rfi.fr/afrique/archives/201507/rss",
-  "http://www.rfi.fr/afrique/archives/201508/rss",
-  "http://www.rfi.fr/afrique/archives/201509/rss",
-  "http://www.rfi.fr/afrique/archives/201510/rss",
-  "http://www.rfi.fr/afrique/archives/201511/rss",
-  "http://www.rfi.fr/afrique/archives/201512/rss",
-  "http://www.rfi.fr/afrique/archives/201601/rss",
-  "http://www.rfi.fr/afrique/archives/201602/rss",
-  "http://www.rfi.fr/afrique/archives/201603/rss",
-  "http://www.rfi.fr/afrique/archives/201604/rss",
-  "http://www.rfi.fr/afrique/archives/201605/rss",
-  "http://www.rfi.fr/afrique/archives/201606/rss",
-  "http://www.rfi.fr/afrique/archives/201607/rss",
-  "http://www.rfi.fr/afrique/archives/201608/rss",
-  "http://www.rfi.fr/afrique/archives/201609/rss",
-  "http://www.rfi.fr/afrique/archives/201610/rss",
-  "http://www.rfi.fr/afrique/archives/201611/rss",
-  "http://www.rfi.fr/afrique/archives/201612/rss",
-  "http://www.rfi.fr/afrique/archives/201701/rss",
-  "http://www.rfi.fr/afrique/archives/201702/rss",
-  "http://www.rfi.fr/afrique/archives/201703/rss",
-  "http://www.rfi.fr/afrique/archives/201704/rss",
-  "http://www.rfi.fr/afrique/archives/201705/rss",
-  "http://www.rfi.fr/afrique/archives/201706/rss",
-  "http://www.rfi.fr/afrique/archives/201707/rss",
-  "http://www.rfi.fr/afrique/archives/201708/rss",
-  "http://www.rfi.fr/afrique/archives/201709/rss",
-  "http://www.rfi.fr/afrique/archives/201710/rss",
-  "http://www.rfi.fr/afrique/archives/201711/rss",
-  "http://www.rfi.fr/afrique/archives/201712/rss",
-  "http://www.rfi.fr/afrique/archives/201801/rss",
-  "http://www.rfi.fr/afrique/archives/201802/rss",
-  "http://www.rfi.fr/afrique/archives/201803/rss",
-  "http://www.rfi.fr/afrique/archives/201804/rss",
-  "http://www.rfi.fr/afrique/archives/201805/rss",
-  "http://www.rfi.fr/afrique/archives/201806/rss",
-  "http://www.rfi.fr/afrique/archives/201807/rss",
-  "http://www.rfi.fr/afrique/archives/201808/rss",
-  "http://www.rfi.fr/afrique/archives/201809/rss",
-  "http://www.rfi.fr/afrique/archives/201810/rss",
-  "http://www.rfi.fr/afrique/archives/201811/rss",
-  "http://www.rfi.fr/afrique/archives/201812/rss",
-  "http://www.rfi.fr/afrique/archives/201901/rss",
-  "http://www.rfi.fr/afrique/archives/201902/rss",
-  "http://www.rfi.fr/afrique/archives/201903/rss",
-  "http://www.rfi.fr/afrique/archives/201904/rss",
-  "http://www.rfi.fr/afrique/archives/201905/rss",
-  "http://www.rfi.fr/afrique/archives/201906/rss",
-  "http://www.rfi.fr/afrique/archives/201907/rss",
-  "http://www.rfi.fr/afrique/archives/201908/rss",
-  "http://www.rfi.fr/afrique/archives/201909/rss",
-  "http://www.rfi.fr/afrique/archives/201910/rss",
-  "http://www.rfi.fr/afrique/archives/201911/rss",
-  "http://www.rfi.fr/afrique/archives/201912/rss",
-  "http://www.rfi.fr/afrique/archives/202001/rss",
-  "http://www.rfi.fr/afrique/archives/202002/rss",
-  "http://www.rfi.fr/afrique/archives/202003/rss",
-  "http://www.rfi.fr/afrique/archives/202004/rss",
-  "http://www.rfi.fr/afrique/archives/202005/rss",
-  "http://www.rfi.fr/afrique/archives/202006/rss",
-  "http://www.rfi.fr/afrique/archives/202007/rss",
-  "http://www.rfi.fr/afrique/archives/202008/rss",
-  "http://www.rfi.fr/afrique/archives/202009/rss",
-  "http://www.rfi.fr/afrique/archives/202010/rss",
-  "http://www.rfi.fr/afrique/archives/202011/rss",
-  "http://www.rfi.fr/afrique/archives/202012/rss",
-  "http://www.rfi.fr/afrique/archives/202101/rss",
-  "http://www.rfi.fr/afrique/archives/202102/rss",
-  "http://www.rfi.fr/afrique/archives/202103/rss",
-  "http://www.rfi.fr/afrique/archives/202104/rss",
-  "http://www.rfi.fr/afrique/archives/202105/rss",
-  "http://www.rfi.fr/afrique/archives/202106/rss",
-  "http://www.rfi.fr/afrique/archives/202107/rss",
-  "http://www.rfi.fr/afrique/archives/202108/rss",
-  "http://www.rfi.fr/afrique/archives/202109/rss",
-  "http://www.rfi.fr/afrique/archives/202110/rss",
-  "http://www.rfi.fr/afrique/archives/202111/rss",
-  "http://www.rfi.fr/afrique/archives/202112/rss" // Ajouter les flux ici
+  "http://www.rfi.fr/afrique/actu/rss"
 ];
 
 // Configuration des mots-clés ciblés sur l'Afrique
@@ -181,54 +90,37 @@ const CONFIG = {
   filterByKeywords: true, // Filtrage par mots-clés
   // Mots-clés d'intérêt par catégorie, centrés sur l'Afrique
   keywords: {
-    technology: [
-      'technologie émergente', 
-      'innovation locale', 
-      'startups émergentes', 
-      'inclusion numérique', 
-      'fintech émergente', 
-      'agritech', 
-      'énergie solaire', 
-      'mobile banking', 
-      'e-commerce', 
-      'connectivité rurale'
+    Monde: [
+      "afrique", "africain", "panafricain", "continent", "union africaine",
+      "presse", "journal", "actualité", "développement", "coopération"
     ],
-    politics: [
-      'démocratie émergente', 
-      'élections locales', 
-      'gouvernance régionale', 
-      'union continentale', 
-      'intégration régionale', 
-      'souveraineté nationale', 
-      'diplomatie Sud-Sud', 
-      'indépendance économique', 
-      'politique panafricaine'
+    
+    politique: [
+      "politique", "élections", "président", "gouvernement", "transition", 
+      "démocratie", "réforme", "loi", "parlement", "coup d'État"
     ],
-    economy: [
-      'croissance économique', 
-      'libre-échange continental', 
-      'développement durable', 
-      'investissement émergent', 
-      'commerce intracontinental', 
-      'ressources naturelles', 
-      'industrialisation émergente', 
-      'entrepreneuriat local', 
-      'diaspora économique', 
-      'microfinance'
-    ],
-    culture: [
-      'héritage culturel', 
-      'langues locales', 
-      'art contemporain', 
-      'musique traditionnelle', 
-      'littérature postcoloniale', 
-      'cinéma émergent', 
-      'traditions locales', 
-      'afrofuturisme', 
-      'décolonisation culturelle', 
-      'patrimoine mondial'
+    
+    Économie: [
+      "économie", "investissement", "marché", "entreprise", "finances", 
+      "mines", "agriculture", "pétrole", "banque", "technologie"
     ]
+    ,
+    Sécurité: [
+      "sécurité", "armée", "terrorisme", "conflit", "militaire", 
+      "attaque", "djihadiste", "ONU", "casque bleu", "paix"
+    ],
+    
+    Éducation: [
+      "éducation", "université", "étudiants", "formation", "jeunesse", 
+      "emploi", "culture", "langue", "société", "religion"
+    ],
+    
+    santé : [
+      "santé", "hôpital", "maladie", "paludisme", "covid", 
+      "vaccin", "environnement", "climat", "eau", "biodiversité"
+    ],
   },
+  
   keywordScoreThreshold: 1 // Score minimum pour qu'un article soit conservé
 };
 
@@ -256,49 +148,48 @@ const fetchFeedsWithDelay = () => {
 
   RSS_FEEDS.forEach((url, index) => {
     setTimeout(async () => {
-      const articles = await fetchRssFeed(url);
+      const articles = await fetchAndProcessFeeds(url);
       console.log(`Articles récupérés pour ${url}:`, articles);
-      // Traite les articles ici
+      // Traite les articles ici si nécessaire
     }, delay);
 
     // Augmente le délai avant le prochain appel
-    delay += fetchInterval;
+    delay += CONFIG.fetchInterval;
   });
 };
 
-// Lancer le processus de récupération avec délai
-fetchFeedsWithDelay();
+async function fetchAndProcessFeeds(feedUrl) {
+  try {
+    const feed = await parser.parseURL(feedUrl);
+    const allItems = [];
 
-// Configuration des sélecteurs par domaine
-const SITE_SELECTORS = {
-  'panapress.com': {
-    articleSelectors: ['article', '.news-content', '.news-article', '.entry-content'],
-    paragraphSelector: 'p',
-    minParagraphLength: 50
-  },
-  'rfi.fr': {
-    articleSelectors: ['article', '.article-body', '.content-body', '.article-content'],
-    paragraphSelector: 'p',
-    minParagraphLength: 50
-  },
-  'africaintelligence.fr': {
-    articleSelectors: ['article', '.article-content', '.post-content', '.entry-content'],
-    paragraphSelector: 'p',
-    minParagraphLength: 50
-  },
-  'default': {
-    articleSelectors: ['article', '.article', '.content', '.post-content', 'main', '.entry-content'],
-    paragraphSelector: 'p',
-    minParagraphLength: 40
+    for (const item of feed.items) {
+      const fullContent = await extractArticleContent(item.link); // Extraction du contenu complet
+
+      if (!fullContent) continue; // Si le contenu est vide, on passe à l'article suivant
+
+      // Calcul du score des mots-clés trouvés dans l'article
+      const { score, categories } = calculateKeywordScore(fullContent); // Catégorisation par mots-clés
+
+      // Si le score est supérieur au seuil, on conserve l'article
+      if (score >= CONFIG.keywordScoreThreshold) {
+        allItems.push({
+          title: item.title,
+          source: item.link,
+          content: fullContent,
+          keywordCategories: categories,
+          keywordScore: score,
+        });
+      }
+    }
+
+    return allItems;
+  } catch (error) {
+    console.error(`Erreur lors de la récupération du flux RSS:`, error.message);
   }
-};
+}
 
-
-/**
- * Extrait le contenu textuel d'une page web
- * @param {string} url - URL de l'article
- * @returns {Promise<string>} Contenu textuel de l'article
- */
+// Fonction pour extraire le contenu textuel d'une page web
 async function extractArticleContent(url) {
   try {
     const response = await axios.get(url);
@@ -346,15 +237,37 @@ async function extractArticleContent(url) {
   }
 }
 
-/**
- * Calcule un score de pertinence basé sur les mots-clés trouvés dans le texte
- * @param {string} text - Texte à analyser
- * @returns {Object} Score et catégories trouvées
- */
-function calculateKeywordScore(text) {
-  if (!text) return { score: 0, categories: {} };
+// Fonction pour catégoriser un article selon les mots-clés
+function categorizeArticleByKeywords(content) {
+  const categories = {};
+
+  for (const [category, keywords] of Object.entries(CONFIG.keywords)) {
+    const foundKeywords = extractKeywords(content, keywords);
+    if (foundKeywords.length > 0) {
+      categories[category] = foundKeywords;
+    }
+  }
+
+  return categories;
+}
+
+// Fonction pour extraire les mots-clés dans un contenu
+function extractKeywords(content, keywords) {
+  const found = [];
+  for (const kw of keywords) {
+    const regex = new RegExp(`\\b${kw}\\b`, 'i');
+    if (regex.test(content)) {
+      found.push(kw);
+    }
+  }
+  return found;
+}
+
+// Fonction pour calculer le score basé sur les mots-clés trouvés
+function calculateKeywordScore(content) {
+  if (!content) return { score: 0, categories: {} };
   
-  const lowercaseText = text.toLowerCase();
+  const lowercaseText = content.toLowerCase();
   let totalScore = 0;
   const categories = {};
   
@@ -382,6 +295,33 @@ function calculateKeywordScore(text) {
   
   return { score: totalScore, categories };
 }
+
+// Lancer le processus de récupération avec délai
+fetchFeedsWithDelay();
+
+// Configuration des sélecteurs par domaine
+const SITE_SELECTORS = {
+  'panapress.com': {
+    articleSelectors: ['article', '.news-content', '.news-article', '.entry-content'],
+    paragraphSelector: 'p',
+    minParagraphLength: 50
+  },
+  'rfi.fr': {
+    articleSelectors: ['article', '.article-body', '.content-body', '.article-content'],
+    paragraphSelector: 'p',
+    minParagraphLength: 50
+  },
+  'africaintelligence.fr': {
+    articleSelectors: ['article', '.article-content', '.post-content', '.entry-content'],
+    paragraphSelector: 'p',
+    minParagraphLength: 50
+  },
+  'default': {
+    articleSelectors: ['article', '.article', '.content', '.post-content', 'main', '.entry-content'],
+    paragraphSelector: 'p',
+    minParagraphLength: 40
+  }
+};
 
 /**
  * Transforme un article RSS en format adapté pour l'IA
@@ -451,35 +391,38 @@ async function generateReport(items, filteredItems) {
     const reportFile = path.join(OUTPUT_DIR, 'rapport.txt');
     let report = `RAPPORT DE RÉCUPÉRATION DES FLUX RSS\n`;
     report += `Date: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}\n\n`;
+
     report += `Nombre total d'articles récupérés: ${items.length}\n`;
     report += `Nombre d'articles conservés après filtrage: ${filteredItems.length}\n\n`;
-    
+
     report += `ARTICLES CONSERVÉS PAR CATÉGORIE:\n`;
     const categoryCounts = {};
+
     filteredItems.forEach(item => {
-      Object.keys(item.keywordCategories).forEach(category => {
+      Object.keys(item.keywordCategories || {}).forEach(category => {
         categoryCounts[category] = (categoryCounts[category] || 0) + 1;
       });
     });
-    
+
     for (const [category, count] of Object.entries(categoryCounts)) {
-      report += `- ${category}: ${count} articles\n`;
+      report += `- ${category}: ${count} article${count > 1 ? 's' : ''}\n`;
     }
-    
+
     report += `\nDÉTAIL DES ARTICLES CONSERVÉS:\n`;
     filteredItems.forEach((item, index) => {
       report += `${index + 1}. "${item.title}" (Score: ${item.keywordScore})\n`;
-      report += `   Catégories: ${Object.keys(item.keywordCategories).join(', ')}\n`;
-      report += `   Source: ${item.source}\n\n`;
+      for (const [cat, info] of Object.entries(item.keywordCategories || {})) {
+        report += `   - ${cat}: ${info.keywords.join(', ')}\n`;
+      }
+      report += `   Lien: ${item.source}\n\n`;
     });
-    
-    await fs.writeFile(reportFile, report);
-    console.log(`Rapport généré dans ${reportFile}`);
+
+    await fs.writeFile(reportFile, report, 'utf-8');
+    console.log(`✅ Rapport généré dans ${reportFile}`);
   } catch (error) {
-    console.error('Erreur lors de la génération du rapport:', error.message);
+    console.error('❌ Erreur lors de la génération du rapport:', error.message);
   }
 }
-
 /**
  * Fonction principale
  */
@@ -514,10 +457,28 @@ async function main() {
   }
 }
 
+const processAllFeeds = async () => {
+  let allItems = [];
+
+  for (const feedUrl of RSS_FEEDS.filter(Boolean)) {
+    const feedItems = await fetchRssFeed(feedUrl);
+
+    for (const item of feedItems) {
+      const transformed = await transformItemForAI(item);
+      allItems.push(transformed);
+    }
+  }
+
+  const filteredItems = filterItemsByKeywords(allItems);
+  await saveToJsonl(filteredItems);
+  await generateReport(allItems, filteredItems);
+};
+
 // Exécution immédiate puis à intervalles réguliers
 main();
 setInterval(main, CONFIG.fetchInterval);
 
+processAllFeeds(); 
 // Gestion propre de la fermeture
 process.on('SIGINT', () => {
   console.log('Bot arrêté');
