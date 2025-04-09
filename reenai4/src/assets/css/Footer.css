@@ -1,13 +1,58 @@
 footer {
-  background-color: #000000;
+  background-color: #000000; /* Légèrement plus clair pour un effet subtil */
   color: #fff;
-  padding: 10px 25px 10px  25px;
+  padding: 30px 40px; /* Un peu plus d'espace pour un look plus équilibré */
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #333; /* Une légère bordure pour séparer du contenu */
+}
 
-  div ul{
-    display: flex;
-    gap: 20px;
-  }
+footer div {
+  display: flex;
+  justify-content: flex-start;
+  gap: 60px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+footer div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+footer div ul li {
+  font-size: 14px;
+}
+
+footer div ul li a {
+  color: #ddd; /* Couleur douce pour les liens */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer div ul li a:hover {
+  color: #ff8c00; /* Orange doux pour l'effet hover */
+  transform: translateY(-2px); /* Petit effet de remontée au survol */
+}
+
+footer div ul li a:active {
+  transform: translateY(0); /* Réduit l'effet de remontée lors de l'activation */
+}
+
+footer div span {
+  font-size: 14px;
+  color: #aaa;
+  text-align: center;
+  margin-top: 15px;
+  width: 100%;
+}
+
+footer div span:hover {
+  color: #fff; /* Change la couleur au survol pour une touche subtile */
+  cursor: pointer;
 }

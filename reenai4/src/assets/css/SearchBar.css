@@ -12,8 +12,8 @@
     border-radius: 16px;
     cursor: pointer;
     margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
-  .search-bar button:hover {
+  /* .search-bar button:hover {
     background-color: #ff6347; /* Couleur au survol */
-  }

@@ -51,7 +51,7 @@
   }
   
   .connexion-container button:hover {
-    background-color: #ff6347; /* Couleur au survol */
+    background-color: #ff6347; 
   }
 
   .text-connexion{
@@ -67,5 +67,5 @@
   }
   
   .text-connexion a:hover {
-    color: #ff6347; /* Couleur au survol */
+    color: #ff6347; 
   }

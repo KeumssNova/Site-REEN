@@ -13,4 +13,16 @@
     flex-direction: column;
     list-style: none;
     gap: 20px;
+
+    a{
+        padding: 0.5rem 1rem;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #ffffff;
+    }
+    a:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        color: #000;
+    }
 }

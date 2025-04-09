@@ -12,7 +12,8 @@
     width: 100%;
 
     .ia{
-        height: 400px;
+        height: 100%;   
+        height: 900px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -20,11 +21,10 @@
     
 }
 .newsContainer{
-    height: auto; /* Enlève la hauteur fixe pour un comportement dynamique */
+    height: auto;
 }
 .News{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
     padding: 20px;
     height: 100%; 
     grid-gap: 20px;

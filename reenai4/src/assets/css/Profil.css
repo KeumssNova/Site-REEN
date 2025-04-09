@@ -45,7 +45,10 @@
       margin-top: 10px;
       border-radius: 18px;
     }
-
+    .changePhotoContainer:hover{
+      transition: background-color 0.3s ease, color 0.3s ease;
+      color: white;
+    }
     .changePhotoBtn{
       color: white;
 
@@ -61,6 +64,11 @@
       border-radius: 18px;
       gap: 20px;
     }
+    
+    button:hover{
+      transition: background-color 0.3s ease, color 0.3s ease;
+      color: white;
+  }
   }
 
   /* Style spécifique pour l'input file */
@@ -84,7 +92,10 @@
     font-weight: inherit;
     cursor: pointer;
   }
-} 
+  
+
+}
+
 
 form {
   display: flex;
@@ -106,7 +117,10 @@ form {
     background-color: rgba(112, 107, 107, 0.26);
     background-position: left 10px center;
   }
-
+  button:hover{
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: white;
+  }
   .mail {
     background: url("../icons/envelope-fill.svg") no-repeat;
     background-size: 30px;

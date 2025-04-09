@@ -25,15 +25,64 @@ nav{
         list-style: none;
         align-items: center;
         gap: 20px;
+        li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            a{  
+                padding: 0.5rem 1rem;
+                background-color: #000000;
+                transition: background-color 0.3s ease, color 0.3s ease;
+                border-radius: 8px;
+                text-decoration: none;
+                color: #ffffff;
+            }
+            a:hover {
+                background-color: rgb(255, 255, 255);
+                color: #ff6347;;
+            }
+        }    
     }
 }
 
 .Header-connexion-ul{
     display: flex;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
     li{
         display: flex;
         justify-content: center;
         align-items: center;
     }
+}
+
+.navLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+.navLink:hover {
+    transform: scale(1.2); 
+  }
+
+.logoutBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    /* transition: background-color 0.3s ease, color 0.3s ease; */
+}
+
+.logoutBtn:hover {
+    background-color: inherit;
+    transform: scale(1.2); 
 }

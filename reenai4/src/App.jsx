@@ -9,6 +9,9 @@ import { PrivateRoute } from './routes/PrivateRoute'
 import Ia from './views/Ia'
 import AdminPanel from './views/AdminPanel'
 import NewsList from './views/NewsList'
+import PC from './views/PC'
+import MentionLegale from './views/MentionLegale'
+import Conversation from './views/Conversation'
 
 export default function App() {
   return (
@@ -20,12 +23,15 @@ export default function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/entreprise" element={<About />} />
       <Route path="/News" element={<NewsList />} />
+      <Route path="/Privacy" element={<PC />} />
+      <Route path='/MentionLegale' element={<MentionLegale/>} />
 
       {/* Routes protégées */}
       <Route element={<PrivateRoute />}>
         <Route path="/profil" element={<Profil />} />
         <Route path="/Ia" element={<Ia />} />
         <Route path="/admin" element={<AdminPanel />} />
+        <Route path="Ia/Conversation" element={<Conversation />} />
       </Route>
     </Routes>
   )
