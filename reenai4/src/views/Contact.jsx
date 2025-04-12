@@ -24,57 +24,60 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact">
-      <Header />
-      <div className="contact-container">
+    <div>
 
-        <h2>Contactez-nous</h2>
+        <Header />
+      <div className="contact">
+        <div className="contact-container">
 
-        <form onSubmit={handleSubmit} className="contact-form">
-          <div className="form-group">
-            <label>Nom</label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
+          <h2>Contactez-nous</h2>
+
+          <form onSubmit={handleSubmit} className="contact-form">
+            <div className="form-group">
+              <label>Nom</label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label>Email</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label>Message</label>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows="5"
+              />
+            </div>
+
+            <button type="submit" className="submit-btn">
+              Envoyer
+            </button>
+          </form>
+
+          <div className="contact-info">
+            <p>Email: novacorporation77@gmail.com</p>
+            <p>Téléphone: 01 23 45 67 89</p>
           </div>
-
-          <div className="form-group">
-            <label>Email</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            <label>Message</label>
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              rows="5"
-            />
-          </div>
-
-          <button type="submit" className="submit-btn">
-            Envoyer
-          </button>
-        </form>
-
-        <div className="contact-info">
-          <p>Email: contact@exemple.com</p>
-          <p>Téléphone: 01 23 45 67 89</p>
         </div>
       </div>
-      <Footer/>
+        <Footer/>
     </div>
   );
 };

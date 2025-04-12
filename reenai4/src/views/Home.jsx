@@ -9,7 +9,6 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [news, setNews] = useState([]);
 
-  // Récupérer les articles depuis l'API
   useEffect(() => {
     const fetchArticles = async () => {
       const response = await fetch("http://localhost:5000/api/articles");
@@ -18,6 +17,17 @@ export default function Home() {
     };
 
     fetchArticles();
+  }, []);
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 900); // seuil de 100px
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -31,7 +41,8 @@ export default function Home() {
           <div className="ia">
             <ChatIa />
           </div>
-          <section className="newsContainer">
+          <section className={`newsContainer  ${scrolled ? "scrolled" : ""}`}>
+          <h1 className="section-title">Articles Récents</h1>
             <div className="News">
               {news.length > 0 ? (
                 news.map((article, index) => (

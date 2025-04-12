@@ -8,6 +8,29 @@ import "../assets/css/admin.css";
 export default function AdminPanel() {
   const [users, setUsers] = useState([]);
   const [error, setError] = useState(null);
+  const [rssFeed, setRssFeed] = useState("");
+  const [keyword, setKeyword] = useState("");
+  const [link, setLink] = useState("");
+
+  // Ajouter un flux RSS
+  const handleAddRssFeed = async () => {
+    try {
+      await axios.post("/api/botConfig/addRssFeed", { rssFeed });
+      alert("Flux RSS ajouté");
+    } catch (error) {
+      alert("Erreur lors de l'ajout du flux RSS");
+    }
+  };
+
+  // Ajouter un mot-clé
+  const handleAddKeyword = async () => {
+    try {
+      await axios.post("/api/botConfig/addKeyword", { keyword, link });
+      alert("Mot-clé ajouté");
+    } catch (error) {
+      alert("Erreur lors de l'ajout du mot-clé");
+    }
+  };
 
   const fetchUsers = async () => {
     try {
@@ -80,7 +103,7 @@ export default function AdminPanel() {
         <div className="Container">
           <h2>Gestion des utilisateurs</h2>
           <div>
-            <h3 className="ListeName">Liste d'utilisateurs</h3>
+            <h3 className="ListeName">Liste d&apos;utilisateurs</h3>
           </div>
           <div className="Card-User">
             {users.map((user) => (
@@ -106,7 +129,9 @@ export default function AdminPanel() {
                   </div>
                 </div>
                 <div className="card-role">
-                  <caption>Role ?</caption>
+                  <p>
+                    <span>Role ?</span>
+                  </p>
                   <select
                     value={user.roles[0]}
                     onChange={(e) => handleRoleChange(user._id, e.target.value)}
@@ -126,7 +151,7 @@ export default function AdminPanel() {
             ))}
           </div>
         </div>
-
+        <h1 className="bot-part-title">BOT MANAGEMENT</h1>
         <div className="Bot-container">
           <h2>Gestion du bot</h2>
           <button
@@ -163,6 +188,29 @@ export default function AdminPanel() {
             </svg>
             Arrêter le bot
           </button>
+          <div className="Manager-bot">
+            <div>
+              <h2>Ajouter un Flux RSS</h2>
+              <input
+                type="text"
+                value={rssFeed}
+                onChange={(e) => setRssFeed(e.target.value)}
+                placeholder="URL du Flux RSS"
+              />
+              <button onClick={handleAddRssFeed}>Ajouter</button>
+            </div>
+
+            <div>
+              <h2>Ajouter un Mot-clé</h2>
+              <input
+                type="text"
+                value={keyword}
+                onChange={(e) => setKeyword(e.target.value)}
+                placeholder="Mot-clé"
+              />
+              <button onClick={handleAddKeyword}>Ajouter</button>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />

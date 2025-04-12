@@ -1,5 +1,10 @@
 .main-admin{
+    padding: 20px;
     margin: 20px;
+    .bot-part-title{
+        padding: 20px;
+
+    }
 }
 .Container {
     padding: 20px;
@@ -188,4 +193,67 @@
 
 .stop-btn:hover {
     background-color: #e53935;
+}
+
+.Manager-bot{
+    /* Style général pour le formulaire */
+form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Style pour les inputs */
+  input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Focus sur les inputs */
+  input:focus {
+    border-color: #4CAF50;
+  }
+  
+  /* Style pour les boutons */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button:active {
+    background-color: #388e3c;
+  }
+  
+  /* Style pour les sections de formulaire */
+  div {
+    margin-bottom: 30px;
+  }
+  
 }

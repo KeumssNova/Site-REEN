@@ -48,6 +48,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: ease-in-out 0.3s;
   }
   
   .connexion-container button:hover {

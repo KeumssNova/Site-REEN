@@ -1,0 +1,16 @@
+RAPPORT DE RÉCUPÉRATION DES FLUX RSS
+Date: 12/04/2025 17:09:59
+
+Nombre total d'articles récupérés: 1
+Nombre d'articles conservés après filtrage: 1
+
+ARTICLES CONSERVÉS PAR CATÉGORIE:
+- Monde: 1 articles
+- Éducation: 1 articles
+
+DÉTAIL DES ARTICLES CONSERVÉS:
+1. "Ouverture à Dakar d'une conférence sur l'emploi des jeunes en Afrique subsaharienne" (Score: 3)
+   - Monde: 1
+   - Éducation: 2
+   Lien: http://www.panapress.com/Ouverture-a-Dakar-d'une-conferen-a_851795-lang1.html
+
