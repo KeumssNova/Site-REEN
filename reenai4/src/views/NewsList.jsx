@@ -17,13 +17,13 @@ const NewsList = () => {
   return (
     <div>
         <Header/>
-      <h1>Tous les Articles</h1>
+      <h1 className='article-title'>Tous les Articles</h1>
       <div className='NewsList'>
         {articles.length > 0 ? (
           articles.map((article, index) => (
             <a href={article.source} key={index}>
-                <img href={article.image}/>
                 <div href={article.source}  className="article-card-All">
+                <img src={article.image}/>
                 <h3>{article.title}</h3>
                 <p>{new Date(article.timestamp).toLocaleDateString()}</p>
                 </div>

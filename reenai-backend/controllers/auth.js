@@ -22,7 +22,7 @@ exports.register = async (req, res) => {
     });
     await user.save();
     
-    // Vérification rétroactive
+    // Vérification : compare le mot de passe dans la bdd avec le mots de passe entré
     const verifyUser = await User.findById(user._id).select('+password');
     const isMatch = await bcrypt.compare(password, verifyUser.password);
     

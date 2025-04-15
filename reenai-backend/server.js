@@ -98,7 +98,7 @@ let botProcess = null; // Déclare une variable pour stocker le processus du bot
 router.post('/start-bot', async (req, res) => {
   try {
     // On exécute le fichier du bot en arrière-plan
-    botProcess = spawn('node', ['./bot/index.js']);  // Modifie le chemin si nécessaire
+    botProcess = spawn('node', ['./bot/index.js']); 
 
     botProcess.stdout.on('data', (data) => {
       console.log(`stdout: ${data}`);
@@ -238,7 +238,11 @@ app.get('/api/all-articles', async (req, res) => {
       .map(line => JSON.parse(line))
       .filter(article => article.title && article.source);
 
-    const articlesWithImages = await Promise.all(articles.map(async (article) => {
+      
+    // Ignorer les 10 premiers articles
+    const articlesToProcess = articles.slice(10); 
+
+    const articlesWithImages = await Promise.all(articlesToProcess.map(async (article) => {
       const cachedImage = myCache.get(article.source);
       if (cachedImage) {
         article.image = cachedImage;

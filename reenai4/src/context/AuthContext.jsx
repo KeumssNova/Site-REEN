@@ -1,5 +1,7 @@
 import { createContext, useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const AuthContext = createContext();
 
@@ -7,13 +9,20 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate(); 
 
   const logout = () => {
     localStorage.removeItem('user');
     localStorage.removeItem('token');
     setUser(null);
-    navigate('/connexion');
+  
+    // if (showToast) {
+    //   toast.success("👋 Vous avez été déconnecté avec succès.");
+    // }
+  
+    // setTimeout(() => {
+    //   navigate('/connexion');
+    // }, 2000);
   };
 
   useEffect(() => {

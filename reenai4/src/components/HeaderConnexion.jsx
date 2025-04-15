@@ -1,11 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../assets/css/Header.css";
 import SearchBar from "./SearchBar.jsx";
 import { useAuth } from "../context/AuthContext";
 import { UserCircle, LayoutDashboard, LogOut } from "lucide-react";
+import { toast } from "react-toastify";
 
 export default function HeaderConnexion() {
   const { user, logout } = useAuth();
+  const navigate = useNavigate();
+  const handleLogoutClick = () => {
+    logout(); // nettoie l’état
+    toast.success("👋 Vous avez été déconnecté avec succès.");
+    setTimeout(() => {
+      navigate('/connexion');
+    }, 2000); // laisse le toast s'afficher 2 secondes
+  };
 
   return (
     <header className="header">
@@ -33,7 +42,7 @@ export default function HeaderConnexion() {
           )}
 
           <li>
-            <button className="logoutBtn" onClick={logout}>
+            <button className="logoutBtn" onClick={handleLogoutClick}>
               <LogOut size={28} />
             </button>
           </li>

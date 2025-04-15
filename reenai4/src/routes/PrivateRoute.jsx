@@ -1,12 +1,13 @@
 import { useAuth } from '../context/AuthContext';
 import { Navigate, Outlet } from 'react-router-dom';
 
+
 export const PrivateRoute = ({role = "user"}) => {
   const { user } = useAuth();
 
 
     console.log('Utilisateur connecté:', user); // Vérification de l'utilisateur
-    console.log('Rôles de l\'utilisateur:', user ? user.roles : 'Aucun utilisateur');
+    console.log("Rôles de l'utilisateur:", user ? user.roles : 'Aucun utilisateur');
   
     // Si l'utilisateur n'est pas connecté ou n'a pas le bon rôle, redirige
     if (!user) {

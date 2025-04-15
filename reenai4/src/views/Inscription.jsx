@@ -21,7 +21,7 @@ export default function Inscription() {
     e.preventDefault();
     
     if (password !== confirmPassword) {
-      alert("Les mots de passe ne correspondent pas");
+      toast.error("Les mots de passe ne correspondent pas");
       return;
     }
 
@@ -36,6 +36,8 @@ export default function Inscription() {
         toast.success(success.message);
         setTimeout(() => navigate('/connexion'), 2000); // Redirection après 2s
         
+      } else {
+        toast.error(error)
       }
     } catch (err) {
       console.error('Erreur lors de l\'inscription:', err);
@@ -85,7 +87,7 @@ export default function Inscription() {
                   disabled={loading}
                 />
               </div>
-              {error && <div className="error-message">{error}</div>}
+              {/* {error && <div className="error-message">{error}</div>} */}
               <button type="submit" disabled={loading}>
                 {loading ? 'Inscription en cours...' : "S'inscrire"}
               </button>

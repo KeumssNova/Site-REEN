@@ -5,6 +5,8 @@ import "../assets/css/Connexion.css";
 import { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Connexion() {
   const [email, setEmail] = useState('');
@@ -22,7 +24,10 @@ export default function Connexion() {
     e.preventDefault();
     const success = await login(email, password);
     if (success) {
-      navigate('/Ia');
+      toast.success(success.message);
+      setTimeout(() => navigate('/IA'), 2000);
+    } else {
+      toast.error(error)
     }
   };
 
@@ -49,7 +54,7 @@ export default function Connexion() {
               required
               disabled={loading}
             />
-            {error && <div className="error-message">{error}</div>}
+            {/* {error && <div className="error-message">{error}</div>} */}
             <button type="submit" disabled={loading}>
               {loading ? 'Chargement...' : 'Se connecter'}
             </button>
@@ -59,6 +64,7 @@ export default function Connexion() {
           </form>
         </div>
       </div>
+      <ToastContainer/>
       <Footer />
     </div>
   );

@@ -10,9 +10,9 @@
 
 const User = require('../models/User');
 
-// GET - Récupérer tous les utilisateurs (admin seulement)
+// GET - Récupérer tous les utilisateurs (Page admin seulement)
 exports.getAllUsers = async (req, res) => {
-  if (!req.userData || !req.userData.roles.includes('admin')) {  // Changer req.user en req.userData
+  if (!req.userData || !req.userData.roles.includes('admin')) { 
     return res.status(403).json({ message: 'Accès interdit' });
   }
 
