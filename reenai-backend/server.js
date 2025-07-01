@@ -69,7 +69,7 @@ app.use((req, res, next) => {
 
 // Middleware CORS
 app.use(cors({
-  origin: 'http://localhost:5173', // URL de votre front
+  origin: 'http://localhost:5173',
   credentials: true
 }));
 
