@@ -1,9 +1,10 @@
 import { useState } from "react";
-import "../assets/css/Contact.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
+import { useAuth } from "../context/AuthContext";
+import HeaderConnexion from "../components/HeaderConnexion";
 const Contact = () => {
+  const {user} = useAuth();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,25 +27,26 @@ const Contact = () => {
   return (
     <div>
 
-        <Header />
-      <div className="contact">
-        <div className="contact-container">
+      {user ? <HeaderConnexion /> : <Header />}
+      <div className="contact min-h-screen py-15 px-5 flex flex-col justify-center items-center">
+        <div className="contact-container max-w-[37.5rem] w-full p-10 bg-white rounded-lg shadow-lg">
 
-          <h2>Contactez-nous</h2>
+          <h2 className="text-center text-[2rem] mb-10">Contactez-nous</h2>
 
-          <form onSubmit={handleSubmit} className="contact-form">
-            <div className="form-group">
-              <label>Nom</label>
+          <form onSubmit={handleSubmit} className="contact-form flex flex-col items-center w-full">
+            <div className="form-group mb-[25px] flex flex-col w-full">
+              <label className="mb-2 text-[0.95rem]">Nom</label>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 required
+                className="bg-[#d9d9d9] rounded-md p-2 outline-[#C3E8BD]"
               />
             </div>
 
-            <div className="form-group">
+            <div className="form-group mb-[25px] flex flex-col w-full">
               <label>Email</label>
               <input
                 type="email"
@@ -52,10 +54,11 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                className="bg-[#d9d9d9] rounded-md p-2 outline-[#C3E8BD]"
               />
             </div>
 
-            <div className="form-group">
+            <div className="form-group mb-[25px] flex flex-col w-full">
               <label>Message</label>
               <textarea
                 name="message"
@@ -63,15 +66,16 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 rows="5"
+                className="bg-[#d9d9d9] rounded-md p-2 outline-[#C3E8BD]"
               />
             </div>
 
-            <button type="submit" className="submit-btn">
+            <button type="submit" className="submit-btn w-full text-white bg-[#C3E8BD] p-2 rounded-md mb-6  hover:bg-[#8EB897] transition-colors duration-300 ease-in-out cursor-pointer ">
               Envoyer
             </button>
           </form>
 
-          <div className="contact-info">
+          <div className="contact-info text-center">
             <p>Email: novacorporation77@gmail.com</p>
             <p>Téléphone: 01 23 45 67 89</p>
           </div>

@@ -1,9 +1,9 @@
-/* Reset CSS de base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+
+@import "tailwindcss";  
 
 body {
   font-family: "inter",Arial, Helvetica, sans-serif;
@@ -12,6 +12,14 @@ body {
   line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  font-family: 'conthrax', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 
 a {
@@ -23,8 +31,10 @@ ul {
   list-style: none;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+
+@font-face {
+  font-family: 'conthrax';
+  src: url('./assets/fonts/Conthrax-SemiBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }

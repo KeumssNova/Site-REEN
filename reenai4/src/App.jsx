@@ -23,16 +23,31 @@ export default function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/entreprise" element={<About />} />
       <Route path="/News" element={<NewsList />} />
-      <Route path="/Privacy" element={<PC />} />
-      <Route path='/MentionLegale' element={<MentionLegale/>} />
+      <Route path="/Politique de Confidentialité" element={<PC />} />
+      <Route path="/MentionLegale" element={<MentionLegale />} />
 
-      {/* Routes protégées */}
-      <Route element={<PrivateRoute />}>
+      {/* Route profil accessible à tous les utilisateurs connectés */}
+      <Route element={<PrivateRoute allowedRoles={['user', 'admin', 'BOT_MANAGER']} />}>
         <Route path="/profil" element={<Profil />} />
+      </Route>
+
+      {/* Routes Ia accessibles à tous les utilisateurs connectés */}
+      <Route element={<PrivateRoute allowedRoles={['user', 'admin', 'BOT_MANAGER']} />}>
         <Route path="/Ia" element={<Ia />} />
-        <Route path="/admin" element={<AdminPanel />} />
         <Route path="Ia/Conversation" element={<Conversation />} />
       </Route>
+
+      {/* Route Admin accessible uniquement aux admins et BOT_MANAGER */}
+      <Route element={<PrivateRoute allowedRoles={['admin', 'BOT_MANAGER']} />}>
+        <Route path="/admin" element={<AdminPanel />} />
+      </Route>
+
+      {/* Route page accès refusé */}
+      {/* <Route path="/unauthorized" element={
+        <div className="text-center mt-20 text-red-600 font-semibold text-xl">
+          Accès refusé. Vous n'avez pas les permissions nécessaires.
+        </div>
+      } /> */}
     </Routes>
   )
 }

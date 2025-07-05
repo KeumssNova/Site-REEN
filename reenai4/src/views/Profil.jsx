@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import axiosInstance from "../services/axiosInstance";
 import HeaderConnexion from "../components/HeaderConnexion";
 import Footer from "../components/Footer";
-import "../assets/css/Profil.css";
+import { LuUser } from "react-icons/lu";
+import { IoMailSharp } from "react-icons/io5";
 
 export default function Profil() {
   const [pseudo, setPseudo] = useState("");
@@ -11,7 +12,7 @@ export default function Profil() {
   const [newPhoto, setNewPhoto] = useState(null);
   const [preview, setPreview] = useState("");
 
-  // 🟢 Charger le profil utilisateur
+  //  Charger le profil utilisateur
   useEffect(() => {
     const fetchProfile = async () => {
       try {
@@ -28,7 +29,7 @@ export default function Profil() {
     fetchProfile();
   }, []);
 
-  // 🟢 Gérer l'aperçu de la photo sélectionnée
+  //  Gérer l'aperçu de la photo sélectionnée
   useEffect(() => {
     if (newPhoto) {
       const objectUrl = URL.createObjectURL(newPhoto);
@@ -57,7 +58,7 @@ export default function Profil() {
     }
   };
 
-  // 🔴 Supprimer la photo de profil
+  //  Supprimer la photo de profil
   const handleDeletePhoto = async () => {
     try {
       await axiosInstance.delete("/user/profile/photo");
@@ -71,11 +72,11 @@ export default function Profil() {
   return (
     <div>
       <HeaderConnexion />
-      <div className="container">
-        <div className="card">
+      <div className="h-screen flex items-center justify-center">
+        <div className="card bg-white p-6 rounded-2xl shadow-lg w-full max-w-4xl">
           <form onSubmit={handleSubmit}>
-            <div className="top">
-              <div className="Photo">
+            <div className="top flex items-center gap-5">
+              <div className="Photo ">
                 <img
                   // src="http://localhost:5000/uploads/profile_pictures/photo-1744105704228-428274157.jpg"
                   src={
@@ -85,41 +86,66 @@ export default function Profil() {
                       : "/default.jpg")
                   }
                   alt="Photo de profil"
+                  className="w-32 h-32 rounded-lg object-cover mb-4 overflow-hidden flex jusrify-center items-center"
                 />
               </div>
-              <div className="Btn">
-                <div className="changePhotoContainer">
+              <div className="Btn flex items-center gap-5">
+                <div className="px-4 bg-[#C3E8BD] p-2 rounded-full flex flex-col items-center gap-2 hover:bg-[#8EB897] transition-colors duration-300 ease-in-out cursor-pointer">
                   <input
                     id="photo"
                     type="file"
                     accept="image/*"
                     onChange={(e) => setNewPhoto(e.target.files[0])}
+                    className="hidden "
                   />
-                  <label htmlFor="photo" className="changePhotoBtn">
+                  <label
+                    htmlFor="photo"
+                    className="changePhotoBtn text-white cursor-pointer"
+                  >
                     Changer la photo
                   </label>
                 </div>
-                <button type="button" onClick={handleDeletePhoto}>
+                <button
+                  type="button"
+                  onClick={handleDeletePhoto}
+                  className=" px-4 text-white bg-[#C3E8BD] p-2 rounded-full flex flex-col items-center gap-2 hover:bg-[#8EB897] transition-colors duration-300 ease-in-out cursor-pointer"
+                >
                   Supprimer la Photo
                 </button>
               </div>
             </div>
-            <div className="bottom">
-              <input
-                className="pseudo"
-                type="text"
-                value={pseudo}
-                onChange={(e) => setPseudo(e.target.value)}
-                placeholder="Pseudo"
-              />
-              <input
-                className="mail"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email"
-              />
-              <button type="submit">Sauvegarder les changements</button>
+            <div className="bottom flex flex-col gap-5">
+              <div className="relative">
+                <div className="absolute left-3 top-1/2 -translate-y-1/2 text-black w-4 h-6 ">
+                  <LuUser size={24} />
+                </div>
+
+                <input
+                  className="pseudo pl-11 w-80 bg-[#d9d9d9] rounded-lg p-2  outline-[#8EB897]"
+                  type="text"
+                  value={pseudo}
+                  onChange={(e) => setPseudo(e.target.value)}
+                  placeholder="Pseudo"
+                />
+              </div>
+              <div className="relative">
+                <div className="absolute left-3 top-1/2 -translate-y-1/2 text-black w-4 h-6 ">
+                  <IoMailSharp size={24} />
+                </div>
+                <input
+                  className="mail pl-11 w-80 bg-[#d9d9d9] rounded-lg p-2 outline-[#8EB897] "
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Email"
+                />
+              </div>
+              <button
+                type="submit"
+                className=" text-white bg-[#C3E8BD] p-2 rounded-full flex flex-col items-center hover:bg-[#8EB897] transition-colors duration-300 ease-in-out cursor-pointer"
+              >
+                Sauvegarder les changements
+              </button>
             </div>
           </form>
         </div>

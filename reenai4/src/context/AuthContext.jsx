@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+// import { useNavigate } from 'react-router-dom';
+// import { toast } from 'react-toastify';
+import axiosInstance from '../services/axiosInstance';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const AuthContext = createContext();
@@ -14,6 +15,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem('user');
     localStorage.removeItem('token');
+    delete axiosInstance.defaults.headers.common['Authorization'];
     setUser(null);
   
     // if (showToast) {
@@ -42,7 +44,8 @@ export const AuthProvider = ({ children }) => {
           });
   
           if (response.ok) {
-            setUser(parsedUser);  // L'utilisateur est toujours valide
+            axiosInstance.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+            setUser(parsedUser);// L'utilisateur est toujours valide
           } else {
             // Token invalide ou expiré, déconnecter l'utilisateur
             logout();
@@ -76,6 +79,7 @@ export const AuthProvider = ({ children }) => {
       }
 
       localStorage.setItem('token', data.token);
+      axiosInstance.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
       localStorage.setItem('user', JSON.stringify(data.user));
       setUser(data.user);
       return true;

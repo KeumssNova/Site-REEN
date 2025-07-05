@@ -1,9 +1,10 @@
 import { useState } from "react";
-import "../assets/css/Conversation.css";
 import HeaderConnexion from "../components/HeaderConnexion";
 import Footer from "../components/Footer";
 import HistoriqueIa from "../components/HistoriqueIa";
 import { Plus, ArrowUp } from "lucide-react";
+import "../assets/css/conversation.css";
+
 const Conversation = () => {
   const [messages, setMessages] = useState([
     {
@@ -34,47 +35,44 @@ const Conversation = () => {
   };
 
   return (
-    <div className="conversation-container">
+    <div className="conversation-container flex flex-col min-h-screen">
       <HeaderConnexion />
-      <div className="main">
-        <div className="BarreLateral">
+      <div className="main flex flex-grow">
+        <div className="BarreLateral flex flex-col items-center w-50 pt-[80px] bg-[#C3E8BD] h-screen sticky top-0">
           <HistoriqueIa />
         </div>
-            <div className="chat-container">
-              <div className="chat-box">
-                {messages.map((msg, index) => (
-                  <div key={index} className={`message ${msg.sender}`}>
-                    <div className="message-content">{msg.text}</div>
-                  </div>
-                ))}
+        <div className="chat-container self-center  flex flex-col items-center justify-center w-full h-full p-10 gap-20 ">
+          <div className="chat-box p-3 max-w-[600px] w-full overflow-y-auto">
+            {messages.map((msg, index) => (
+              <div
+                key={index}
+                className={`message mb-2 items-start   ${msg.sender}`}
+              >
+                <div className="message-content ">{msg.text}</div>
               </div>
-              <div className="input-area">
-                  <textarea
-                    className="Chat-input"
-                    type="text"
-                    value={userInput}
-                    onChange={(e) => setUserInput(e.target.value)}
-                    placeholder="Tapez votre message..."
-                  />
-                  <div className="form-btn">  
-                  <button className="plus-btn">
-                    <Plus size={25} />
-                  </button>
-                  <button onClick={handleSendMessage} className="valider-btn">
-                    <ArrowUp size={25} />
-                  </button>
-                  </div>
-              </div>
-              {/* <div className="input-area">
-                <input
-                  type="text"
-                  value={userInput}
-                  onChange={(e) => setUserInput(e.target.value)}
-                  placeholder="Tapez votre message..."
-                />
-                <button onClick={handleSendMessage}>Envoyer</button>
-              </div> */}
+            ))}
+          </div>
+          <div className="input-area flex flex-col w-full max-w-[600px] gap-3 justify-between bg-black rounded-[20px] p-3">
+            <textarea
+              className="Chat-input rounded-[20px] p-3 border-none text-white bg-black outline-none h-full w-full resize-none col-span-2"
+              type="text"
+              value={userInput}
+              onChange={(e) => setUserInput(e.target.value)}
+              placeholder="Posez votre question..."
+            />
+            <div className="form-btn flex justify-between items-center p-0 m-0">
+              <button className="plus-btn flex justify-center items-center bg-black text-white rounded-full h-auto w-auto p-2 m-0 col-span-1 transition duration-300 ease-in-out hover:bg-[#8EB897]">
+                <Plus size={25} />
+              </button>
+              <button
+                onClick={handleSendMessage}
+                className="valider-btn flex justify-center items-center bg-black text-white rounded-full h-auto w-auto p-2 m-0 col-span-1 transition duration-300 ease-in-out hover:bg-[#8EB897]"
+              >
+                <ArrowUp size={25} />
+              </button>
             </div>
+          </div>
+        </div>
       </div>
       <Footer />
     </div>
