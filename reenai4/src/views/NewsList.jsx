@@ -22,8 +22,8 @@ const NewsList = () => {
   return (
     <div>
       {user ? <HeaderConnexion /> : <Header />}
-      <div className="main flex flex-grow">
-        <div className="BarreLateral flex flex-col items-center w-64 pt-[80px] bg-[#C3E8BD] h-screen sticky top-0">
+      <div className="flex flex-col md:flex-row md:flex-grow lg:flex-grow">
+        <div className="BarreLateral flex flex-col w-screen items-start pl-5 pb-5 md:items-center md:pl-0 md:pb-0 md:w-64 pt-[80px] bg-[#C3E8BD] md:h-screen md:sticky md:top-0">
           <BarreLateral />
         </div>
         <div className="flex flex-col items-center w-full my-5">
@@ -32,7 +32,7 @@ const NewsList = () => {
           </h1>
           <div className="max-w-7xl mx-auto px-4 mb-9">
             {/* Conteneur haut : 2 colonnes (1er article à gauche, 2e + 3e au milieu) */}
-            <div className="grid grid-cols-[2fr_1fr] gap-6 mb-6">
+            <div className="flex flex-col md:grid md:grid-cols-[2fr_1fr] gap-6 mb-6">
               {/* 1er article */}
               {articles[0] && (
                 <a
@@ -93,7 +93,7 @@ const NewsList = () => {
             </div>
 
             {/* En dessous, la 3e colonne avec le reste des articles */}
-            <div className="grid grid-cols-3 gap-6">
+            <div className="flex flex-col  md:grid md:grid-cols-3 gap-6">
               {articles.slice(3).map((article, index) => (
                 <a
                   href={article.source}

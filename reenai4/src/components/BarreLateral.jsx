@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <div>
-          <ul className="flex text-black flex-col h-full list-none gap-4 ">
+          <ul className="flex  text-black flex-col h-full list-none gap-4 ">
             <li>
               <Link to="/news">Actualités</Link>
             </li>

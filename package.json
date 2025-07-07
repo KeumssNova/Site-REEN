@@ -1,5 +1,28 @@
 {
   "dependencies": {
-    "bootstrap-icons": "^1.11.3"
-  }
+    "@tailwindcss/cli": "^4.1.11",
+    "bootstrap-icons": "^1.11.3",
+    "tailwindcss": "^4.1.11"
+  },
+  "name": "site-reen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss -i ./reenai4/src/input.css -o ./reenai4/src/output.css --minify",
+    "watch:css": "tailwindcss -i ./reenai4/src/index.css -o ./reenai4/src/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KeumssNova/Site-REEN.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KeumssNova/Site-REEN/issues"
+  },
+  "homepage": "https://github.com/KeumssNova/Site-REEN#readme"
 }

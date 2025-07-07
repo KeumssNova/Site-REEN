@@ -1,54 +1,77 @@
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import SearchBar from "./SearchBar.jsx";
 import { useAuth } from "../context/AuthContext";
+import SearchBar from "./SearchBar.jsx";
 import { UserCircle, LayoutDashboard, LogOut } from "lucide-react";
 import { toast } from "react-toastify";
 
 export default function HeaderConnexion() {
+  const [isOpen, setIsOpen] = useState(false);
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+
   const handleLogoutClick = () => {
-    logout(); // nettoie l’état
+    logout();
     toast.success("👋 Vous avez été déconnecté avec succès.");
-    setTimeout(() => {
-      navigate("/connexion");
-    }, 2000);
+    setTimeout(() => navigate("/connexion"), 2000);
   };
 
-  return (
-    <header className="header bg-[#000] text-[#fff] flex justify-between items-center w-full py-3">
-      <div className="font-conthrax logo pl-5 text-xl font-bold">
-        <Link to="/">
-          <h1>Reen</h1>
+  const isAdmin = user?.roles?.includes("admin") || user?.roles?.includes("BOT_MANAGER");
+
+  const navItems = (
+    <>
+      <li>
+        <SearchBar />
+      </li>
+      <li className="transition duration-300 hover:scale-110">
+        <Link to="/Profil">
+          <UserCircle size={28} />
         </Link>
+      </li>
+      {isAdmin && (
+        <li className="transition duration-300 hover:scale-110">
+          <Link to="/admin">
+            <LayoutDashboard size={24} />
+          </Link>
+        </li>
+      )}
+      <li className="transition duration-300 hover:scale-110 flex items-center">
+        <button onClick={handleLogoutClick}>
+          <LogOut size={24} />
+        </button>
+      </li>
+    </>
+  );
+
+  return (
+    <header className="bg-black text-white w-full py-3 px-4 flex justify-between items-center relative z-50">
+      <div className=" logofont-conthrax text-xl font-bold">
+        <Link to="/">Reen</Link>
       </div>
-      <nav className="flex items-center px-4">
-        <ul className="Header-connexion-ul flex justify-center items-center gap-3 list-none">
-          <li>
-            <SearchBar />
-          </li>
-          <li className="transition duration-300 hover:scale-120">
-            <Link className="navLink" to="/Profil">
-              <UserCircle size={33} />
-            </Link>
-          </li>
 
-          {(user?.roles?.includes("admin") ||
-            user?.roles?.includes("BOT_MANAGER")) && (
-            <li className="transition duration-300 hover:scale-120">
-              <Link className="navLink" to="/admin">
-                <LayoutDashboard size={28} />
-              </Link>
-            </li>
-          )}
+      {/* Burger menu */}
+      <button
+        className="md:hidden focus:outline-none"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <div className="space-y-1">
+          <span className="block h-0.5 w-6 bg-white"></span>
+          <span className="block h-0.5 w-6 bg-white"></span>
+          <span className="block h-0.5 w-6 bg-white"></span>
+        </div>
+      </button>
 
-          <li className="flex transition duration-300 hover:scale-120 ">
-            <button className="logoutBtn" onClick={handleLogoutClick}>
-              <LogOut size={28} />
-            </button>
-          </li>
-        </ul>
+      {/* Desktop menu */}
+      <nav className="hidden md:flex items-center gap-4">
+        <ul className="flex items-center gap-4 list-none">{navItems}</ul>
       </nav>
+
+      {/* Mobile menu (slide down) */}
+      {isOpen && (
+        <nav className="absolute top-full left-0 w-full bg-black py-4 md:hidden">
+          <ul className="flex justify-around items-center">{navItems}</ul>
+        </nav>
+      )}
     </header>
   );
 }
