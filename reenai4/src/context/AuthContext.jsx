@@ -5,6 +5,7 @@ import axiosInstance from '../services/axiosInstance';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const AuthContext = createContext();
+const API_URL = import.meta.env.VITE_API_URL;
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -36,7 +37,7 @@ export const AuthProvider = ({ children }) => {
       // Vérification de la validité du token côté serveur
       const verifyToken = async () => {
         try {
-          const response = await fetch('http://localhost:5000/api/auth/verify-token', {
+          const response = await fetch(`${API_URL}/api/auth/verify-token`, {
             method: 'GET',
             headers: {
               'Authorization': `Bearer ${token}`
@@ -64,7 +65,7 @@ export const AuthProvider = ({ children }) => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch(`${API_URL}/api/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -95,7 +96,7 @@ export const AuthProvider = ({ children }) => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:5000/api/auth/register', {
+      const response = await fetch(`${API_URL}/api/auth/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
