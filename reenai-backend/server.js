@@ -11,16 +11,9 @@ const {JSDOM} = jsdom;
 const axios = require('axios');
 
 
-// Configuration
-const config = {
-  username: process.env.DB_USER || 'salymdc',
-  password: process.env.DB_PASS || 'motdepasse',
-  cluster: process.env.DB_CLUSTER || 'reenai-db.6aafrxa.mongodb.net',
-  dbName: process.env.DB_NAME || 'reenai-db'
-};
 
 // URI de connexion
-const uri = `mongodb+srv://${encodeURIComponent(config.username)}:${encodeURIComponent(config.password)}@${config.cluster}/${config.dbName}?retryWrites=true&w=majority&authMechanism=SCRAM-SHA-1`;
+const uri = process.env.MONGO_URI
 
 // Initialisation Express
 const app = express();
@@ -79,7 +72,7 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/admin', require('./routes/admin'));
 
 // Démarrage
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, async () => {
   console.log(`\n🚀 Server prêt sur le port ${PORT}`);
   await connectDatabases();
