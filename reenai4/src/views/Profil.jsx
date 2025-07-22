@@ -11,6 +11,7 @@ export default function Profil() {
   const [photoUrl, setPhotoUrl] = useState("");
   const [newPhoto, setNewPhoto] = useState(null);
   const [preview, setPreview] = useState("");
+  const API_URL = import.meta.env.VITE_API_URL;
 
   //  Charger le profil utilisateur
   useEffect(() => {
@@ -78,11 +79,11 @@ export default function Profil() {
             <div className="top flex items-center gap-5">
               <div className="Photo ">
                 <img
-                  // src="http://localhost:5000/uploads/profile_pictures/photo-1744105704228-428274157.jpg"
+                  // src="${API_URL}/uploads/profile_pictures/photo-1744105704228-428274157.jpg"
                   src={
                     preview ||
                     (photoUrl
-                      ? `${`http://localhost:5000${photoUrl}`}`
+                      ? `${`${API_URL}${photoUrl}`}`
                       : "/default.jpg")
                   }
                   alt="Photo de profil"

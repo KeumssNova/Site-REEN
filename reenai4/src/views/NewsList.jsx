@@ -5,13 +5,15 @@ import BarreLateral from "../components/BarreLateral";
 import { useAuth } from "../context/AuthContext";
 import HeaderConnexion from "../components/HeaderConnexion";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const NewsList = () => {
   const [articles, setArticles] = useState([]);
   const {user} = useAuth();
 
   useEffect(() => {
     // Récupérer tous les articles
-    fetch("http://localhost:5000/api/all-articles")
+    fetch(`${API_URL}/api/all-articles`)
       .then((response) => response.json())
       .then((data) => setArticles(data))
       .catch((error) =>

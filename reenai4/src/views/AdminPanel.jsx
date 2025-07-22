@@ -10,6 +10,7 @@ export default function AdminPanel() {
   const [rssFeed, setRssFeed] = useState("");
   const [keyword, setKeyword] = useState("");
   const [link] = useState("");
+  const API_URL = import.meta.env.VITE_API_URL;
 
   // Ajouter un flux RSS
   const handleAddRssFeed = async () => {
@@ -75,7 +76,7 @@ export default function AdminPanel() {
   // Fonction pour démarrer le bot
   const handleStartBot = async () => {
     try {
-      await axios.post("http://localhost:5000/api/bot/start-bot");
+      await axios.post(`${API_URL}/api/bot/start-bot`);
       setIsBotRunning(true); // Indique que le bot est en cours d'exécution
       alert("Bot demarré");
     } catch (error) {
@@ -86,7 +87,7 @@ export default function AdminPanel() {
   // Fonction pour arrêter le bot
   const handleStopBot = async () => {
     try {
-      await axios.post("http://localhost:5000/api/bot/stop-bot");
+      await axios.post(`${API_URL}/api/bot/stop-bot`);
       setIsBotRunning(false); // Indique que le bot n'est plus en cours d'exécution
       alert("Bot arrêté");
     } catch (error) {
@@ -117,7 +118,7 @@ export default function AdminPanel() {
                     <img
                       src={
                         user.photo
-                          ? `http://localhost:5000${user.photo}`
+                          ? `${API_URL}${user.photo}`
                           : "../assets/icons/no-photo.jpg"
                       }
                       alt="Photo de profil"

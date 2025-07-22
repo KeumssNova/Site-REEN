@@ -10,10 +10,11 @@ import HeaderConnexion from "../components/HeaderConnexion";
 export default function Home() {
   const [news, setNews] = useState([]);
   const {user} = useAuth();
+  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const fetchArticles = async () => {
-      const response = await fetch("http://localhost:5000/api/articles");
+      const response = await fetch(`${API_URL}/api/articles`);
       const data = await response.json();
       setNews(data);
     };
