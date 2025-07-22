@@ -3,7 +3,7 @@ import HeaderConnexion from "../components/HeaderConnexion";
 import Footer from "../components/Footer";
 import HistoriqueIa from "../components/HistoriqueIa";
 import { Plus, ArrowUp } from "lucide-react";
-import "../assets/css/conversation.css";
+import "../assets/css/Conversation.css";
 
 const Conversation = () => {
   const [messages, setMessages] = useState([
