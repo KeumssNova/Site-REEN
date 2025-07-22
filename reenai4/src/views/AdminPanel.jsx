@@ -100,11 +100,11 @@ export default function AdminPanel() {
       <div className="main-admin p-5 m-5">
         {error && <p className="error">{error}</p>}
         <div className="Container p-5 m-[25px auto]">
-          <h2 className="text-4xl">Gestion des utilisateurs</h2>
+          <h2 className="sm: text-lg md:text-4xl">Gestion des utilisateurs</h2>
           <div>
-            <h3 className="ListeName text-xl font-bold text-[#333] mb-5 text-center">Liste d&apos;utilisateurs</h3>
+            <h3 className="ListeName md:text-xl font-bold text-[#333] mb-5 text-center">Liste d&apos;utilisateurs</h3>
           </div>
-          <div className="Card-User grid grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-5 mt-5  ">
+          <div className="Card-User grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 mt-5">
             {users.map((user) => (
               <div className="User-info bg-white rounded-lg p-5 shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)]" key={user._id}>
                 <div className="card-title flex flex-col items-center mb-4">

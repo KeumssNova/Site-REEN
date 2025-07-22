@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import SearchBar from "./SearchBar.jsx";
-import { UserCircle, LayoutDashboard, LogOut } from "lucide-react";
+import { UserCircle, LayoutDashboard, LogOut,History } from "lucide-react";
 import { toast } from "react-toastify";
+import "../assets/css/style.css";
 
-export default function HeaderConnexion() {
+export default function HeaderConnexion({ onToggleHistorique }) {
   const [isOpen, setIsOpen] = useState(false);
   const { user, logout } = useAuth();
   const navigate = useNavigate();
@@ -16,12 +16,24 @@ export default function HeaderConnexion() {
     setTimeout(() => navigate("/connexion"), 2000);
   };
 
-  const isAdmin = user?.roles?.includes("admin") || user?.roles?.includes("BOT_MANAGER");
+  const isAdmin =
+    user?.roles?.includes("admin") || user?.roles?.includes("BOT_MANAGER");
 
   const navItems = (
     <>
       <li>
-        <SearchBar />
+        <button
+          onClick={onToggleHistorique}
+          className="md:hidden text-gray-800 focus:outline-none flex"
+          aria-label="Ouvrir l'historique"
+        >
+          <History size={28} color="white" />
+        </button>
+      </li>
+      <li>
+        <Link to="/ia">
+          <span className="text-lg font-bold">ReenAI</span>
+        </Link>
       </li>
       <li className="transition duration-300 hover:scale-110">
         <Link to="/Profil">
@@ -45,10 +57,9 @@ export default function HeaderConnexion() {
 
   return (
     <header className="bg-black text-white w-full py-3 px-4 flex justify-between items-center relative z-50">
-      <div className=" logofont-conthrax text-xl font-bold">
+      <div className=" logo font-conthrax text-xl font-bold">
         <Link to="/">Reen</Link>
       </div>
-
       {/* Burger menu */}
       <button
         className="md:hidden focus:outline-none"

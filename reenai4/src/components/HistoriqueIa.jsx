@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 export default function Conversation() {
   return (
-    <div>
+    <div className="flex flex-col items-start p-5">
         <h2 className="text-bold text-lg mb-10">Conversations</h2>
       <div className="Conversation h-full flex flex-col items-start gap-3">
         <h4 className="opacity-70">Aujourd&apos;hui</h4>
