@@ -58,7 +58,7 @@ https://site-reen.vercel.app/
 🧪 Usage
 Once running:
 
-Visit http://localhost:3000
+Visit http://localhost:5000
 
 Browse dynamic sections featuring Africa-related datasets or examples(articles).
 
