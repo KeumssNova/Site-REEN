@@ -19,7 +19,7 @@ A web platform showcasing an Africa-focused AI Language Model (LLM), built with 
 | Frontend    | React              |
 | Backend     | Node.js + Express  |
 | Database    | MongoDB            |
-| Deployment  | Vercel/Heroku  |
+| Deployment  | Vercel/Render  |
 | Others      | Axios, React Router, ... |
 
 ---
