@@ -46,7 +46,7 @@ const SITE_SELECTORS = {
 
 const mongoose = require('mongoose');
 
-const uri = "mongodb+srv://salymdc:motdepasse@reenai-db.6aafrxa.mongodb.net/?retryWrites=true&w=majority&appName=reenai-db";
+const uri = process.env.MONGO_URI
 
 mongoose.connect(uri)
   .then(() => {
